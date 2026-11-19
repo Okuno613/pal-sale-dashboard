@@ -37,7 +37,10 @@ export function mergeDeals(feed, catalog) {
         if (typeof raw[key] === 'string') existing[key] = raw[key];
       }
       if (typeof raw.titleJa === 'string') existing.name = raw.titleJa;
-      if (typeof raw.discount === 'number' && raw.discount >= 0 && raw.discount <= 100) existing.discount = raw.discount;
+      if (Object.hasOwn(raw, 'discount') && raw.discount === null) {
+        if (existing.discount != null && !raw.benefit) existing.benefit = '割引率は未確認';
+        existing.discount = null;
+      } else if (typeof raw.discount === 'number' && raw.discount >= 0 && raw.discount <= 100) existing.discount = raw.discount;
       continue;
     }
     result.push({ id: `feed-${raw.name}`, name: raw.titleJa || raw.name,

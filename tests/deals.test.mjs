@@ -26,6 +26,12 @@ test('precise deadlines survive date-only feed values; explicit updates still ap
   result = mergeDeals([{ name: 'Qwen', deadline: '2026-12-02T00:00:00+09:00' }], catalog);
   assert.equal(result[0].deadline, '2026-12-02T00:00:00+09:00');
 });
+test('an explicit unknown discount clears a stale catalog rate and filter match', () => {
+  const merged = mergeDeals([{ name: 'Sale', discount: null }], [{ name: 'Sale', discount: 50, benefit: '50% OFF' }]);
+  assert.equal(merged[0].discount, null);
+  assert.equal(merged[0].benefit, '割引率は未確認');
+  assert.equal(filterDeals(merged, { minDiscount: 30 }, now).length, 0);
+});
 const deals = [
   { id: 'half', name: '半額', group: 'AI', field: 'API', offerType: '年額', discount: 50, deadline: '2026-11-21' },
   { id: 'bonus', name: '20%増量', group: 'AI', field: 'API', offerType: '増量', discount: null, deadline: null },
