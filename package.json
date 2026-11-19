@@ -1,0 +1,11 @@
+{
+  "name": "pal-sale-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 3000 --bind 0.0.0.0 --directory dist",
+    "build": "python3 build.py",
+    "test": "python3 -m unittest discover -s tests && node --test tests/*.test.mjs",
+    "check": "node --check public/app.js && node --check public/deals.js && python3 -m py_compile build.py publish_feed.py"
+  }
+}
