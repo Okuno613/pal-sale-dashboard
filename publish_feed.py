@@ -7,7 +7,8 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 PUBLIC_FIELDS = ('name', 'url', 'deadline', 'titleJa', 'group', 'field', 'offerType',
-                 'benefit', 'description', 'conditions', 'discount', 'starts', 'checkedAt')
+                 'benefit', 'description', 'conditions', 'discount', 'starts', 'checkedAt',
+                 'serviceSummary', 'serviceUrl', 'campaignType')
 
 
 def sanitize(raw):
@@ -23,6 +24,12 @@ def sanitize(raw):
         # Basic source schema is intentionally tiny; unknown fields never pass through.
         clean = {key: record[key] for key in PUBLIC_FIELDS if key in record}
         for key, value in clean.items():
+            if key == 'serviceUrl' and value is not None:
+                if not isinstance(value, str):
+                    raise ValueError('Service source must be text')
+                source = urlsplit(value)
+                if source.scheme not in ('https', 'http') or not source.netloc or source.username or source.password:
+                    raise ValueError('Service source must be a public HTTP(S) URL')
             if key == 'discount':
                 if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 100):
                     raise ValueError('Discount must be 0–100 or null')

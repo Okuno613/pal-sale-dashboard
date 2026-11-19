@@ -38,6 +38,15 @@ const deals = [
   { id: 'ended', name: '終了', group: '買い物', field: '家電', discount: 90, deadline: '2026-11-18' },
   { id: 'next', name: '予定', group: '買い物', field: '家電', discount: 30, starts: '2026-11-20T00:00:00+09:00', deadline: '2026-11-30' }
 ];
+test('official context survives feed updates and supports campaign and service search', () => {
+  const catalog = [{ id: 'router', name: 'Router', serviceSummary: 'APIアグリゲータ', serviceUrl: 'https://example.com/service', campaignType: 'モデル公開' }];
+  const merged = mergeDeals([{ name: 'Router', discount: 50 }, { name: 'Student', url: 'https://example.com', serviceSummary: 'AI開発', serviceUrl: 'javascript:alert(1)', campaignType: '学割' }], catalog);
+  assert.equal(merged[0].serviceSummary, catalog[0].serviceSummary);
+  assert.equal(merged[0].serviceUrl, catalog[0].serviceUrl);
+  assert.equal(merged[1].serviceUrl, null);
+  assert.deepEqual(filterDeals(merged, { query: 'アグリゲータ' }, now).map(d => d.id), ['router']);
+  assert.equal(filterDeals(merged, { campaignType: '学割', query: '学割' }, now).length, 1);
+});
 test('combined filters exclude bonuses, unknown dates and expired offers', () => {
   assert.deepEqual(filterDeals(deals, { status: 'live', group: 'AI', minDiscount: 30, deadline: 3 }, now).map(d => d.id), ['half']);
   assert.deepEqual(filterDeals(deals, { status: 'upcoming', query: '予定' }, now).map(d => d.id), ['next']);

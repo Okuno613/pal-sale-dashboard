@@ -2,8 +2,8 @@ import { mergeDeals, filterDeals, sortDeals, statusOf, daysLeft, deadlineTime } 
 
 const $ = selector => document.querySelector(selector);
 const form = $('#filters');
-const fieldNames = ['group', 'field', 'offerType', 'minDiscount', 'deadline', 'status', 'onlySaved'];
-const labels = { group: '系統', field: '分野', offerType: '特典', minDiscount: '割引率', deadline: '期限', status: '状況' };
+const fieldNames = ['group', 'field', 'offerType', 'campaignType', 'minDiscount', 'deadline', 'status', 'onlySaved'];
+const labels = { group: '系統', field: '分野', offerType: '特典', campaignType: '施策', minDiscount: '割引率', deadline: '期限', status: '状況' };
 let deals = [], lastPayload = null, saved = [], hasData = false;
 try { const stored = JSON.parse(localStorage.getItem('pal-saved') || '[]'); if (Array.isArray(stored)) saved = stored.filter(v => typeof v === 'string'); } catch { /* Storage may be unavailable. */ }
 const params = new URLSearchParams(location.search);
@@ -64,7 +64,12 @@ function saveButton(deal) {
 }
 function showDetail(deal) {
   const content = $('#detail-content'); content.replaceChildren();
-  content.append(element('p', 'eyebrow', `${deal.group} / ${deal.field}`), element('h2', '', deal.name), element('p', 'benefit', deal.benefit), element('p', '', deal.description));
+  content.append(element('p', 'eyebrow', `${deal.group} / ${deal.field}`), element('h2', '', deal.name));
+  content.append(element('h3', '', 'どんなサービス？'), element('p', '', deal.serviceSummary || 'サービス概要は公式情報を確認中です。'));
+  if (deal.serviceUrl) {
+    const source = element('a', 'service-source', 'サービスの公式説明 ↗'); source.href = deal.serviceUrl; source.target = '_blank'; source.rel = 'noopener noreferrer'; content.append(source);
+  }
+  content.append(element('h3', '', deal.campaignType || '施策の種類は未確認'), element('p', 'benefit', deal.benefit), element('p', '', deal.description));
   content.append(element('h3', '', '対象・条件'), element('p', '', deal.conditions));
   content.append(element('h3', '', '期間'), element('p', '', `${deal.starts ? `${new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(Date.parse(deal.starts))}から / ` : ''}${deal.deadline ? `${fmtDate(deal.deadline, true)}まで${/^\d{4}-\d{2}-\d{2}$/.test(deal.deadline) ? '（終了時刻は未確認）' : ` ${new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit' }).format(deadlineTime(deal.deadline))} JST`}` : '終了日の記載なし'}`));
   content.append(element('p', 'detail-meta', `割引率: ${deal.discount == null ? '不明・算出対象外' : `${deal.discount}%${deal.maxDiscount ? '（最大）' : ''}`} / 特典: ${deal.offerType}`));
@@ -80,9 +85,13 @@ function card(deal) {
   top.append(element('span', 'service-icon', deal.monogram || deal.name.slice(0, 2)));
   if (status !== 'active' || deal.fresh) top.append(element('span', `status-label ${status}`, status === 'upcoming' ? '開催予定' : status === 'ended' ? '終了' : '新着・未整理'));
   top.append(saveButton(deal));
-  article.append(top, element('p', 'category', `${deal.field} / ${deal.offerType}`), element('h3', '', deal.name), element('div', 'benefit', deal.benefit), element('p', 'description', deal.description), element('p', 'condition', deal.shortCondition || deal.conditions));
-  const bottom = element('div', 'card-bottom'), days = daysLeft(deal);
-  bottom.append(element('span', `deadline ${days !== null && days >= 0 && days <= 3 ? 'urgent' : ''}`, deadlineLabel(deal)));
+  article.append(top, element('p', 'category', `${deal.field} / ${deal.offerType}`), element('h3', '', deal.name));
+  const days = daysLeft(deal), deadline = element('time', `deadline ${days === null ? 'unknown' : days >= 0 && days <= 3 ? 'urgent' : ''}`, deadlineLabel(deal));
+  if (deal.deadline) deadline.dateTime = deal.deadline;
+  article.append(deadline, element('p', 'service-summary', deal.serviceSummary || 'サービス概要は公式情報を確認中です。'));
+  article.append(element('span', 'campaign-label', deal.campaignType || '施策未確認'), element('div', 'benefit', deal.benefit), element('p', 'description', deal.description), element('p', 'condition', deal.shortCondition || deal.conditions));
+  const bottom = element('div', 'card-bottom');
+  bottom.append(element('span', 'card-source-note', '特典の詳細・出典'));
   const button = element('button', 'detail-link', '条件を見る ↗'); button.type = 'button'; button.addEventListener('click', () => showDetail(deal));
   bottom.append(button); article.append(bottom); return article;
 }
@@ -107,10 +116,10 @@ function render() {
 }
 function reset() { form.reset(); $('#search').value = ''; $('#sort').value = 'deadline'; render(); }
 function populateOptions(first) {
-  for (const key of ['group', 'field', 'offerType']) {
+  for (const key of ['group', 'field', 'offerType', 'campaignType']) {
     const select = form.elements[key], previous = first ? params.get(key) : select.value;
     select.replaceChildren(select.options[0]);
-    for (const value of [...new Set(deals.map(d => d[key]))].sort((a, b) => a.localeCompare(b, 'ja'))) { const option = element('option', '', value); option.value = value; select.append(option); }
+    for (const value of [...new Set(deals.map(d => d[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ja'))) { const option = element('option', '', value); option.value = value; select.append(option); }
     if ([...select.options].some(o => o.value === previous)) select.value = previous;
   }
 }
