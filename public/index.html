@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FCFCFC">
+  <meta name="description" content="PALが集めたセールを、分野・割引率・期限でひと目に。">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="stylesheet" href="./style.css">
+  <title>PAL セールノート</title>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./" aria-label="PAL セールノート ホーム"><img src="./icon.svg" alt="" width="32" height="32"><strong>PAL</strong><span>セールノート</span></a><span class="top-note">いいタイミングを、見逃さない。</span><time id="today"></time></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">YOUR DAILY DEAL DIGEST</p><h1>今日のセールを、<br class="mobile-break">ひと目で。</h1><p class="lede">AIから、いつもの道具まで。気になるお得だけを見つけよう。</p></div><div class="sync-box"><span class="sync-label"><span class="dot"></span> PALのセールウォッチ</span><span id="sync-time">データを読み込み中…</span><button id="refresh" class="text-button" type="button">↻ 今すぐ読み直す</button></div></section>
+    <section class="stats" aria-label="セールの概況"><button type="button" data-quick="live"><span>開催中・開催予定</span><strong id="total-count">—</strong><small>件のセール</small></button><button type="button" data-quick="soon"><span>まもなく終了</span><strong id="soon-count">—</strong><small>3日以内</small></button><button type="button" data-quick="annual"><span>年額プランのお得</span><strong id="annual-count">—</strong><small>件をチェック</small></button><button type="button" data-quick="saved"><span>気になるリスト</span><strong id="saved-count">0</strong><small>この端末に保存</small></button></section>
+    <p id="feed-warning" class="notice" role="status" hidden></p>
+    <div class="workspace">
+      <aside><details id="filter-panel" open><summary>絞り込み <span>＋</span></summary><form id="filters"><div class="filter-heading"><h2>絞り込み</h2><button id="clear-filters" type="button" class="text-button">リセット</button></div><label>系統<select name="group"><option value="">すべての系統</option></select></label><label>分野<select name="field"><option value="">すべての分野</option></select></label><label>特典の種類<select name="offerType"><option value="">すべての特典</option></select></label><label>割引率<select name="minDiscount"><option value="">すべて（不明を含む）</option><option value="10">10%以上</option><option value="30">30%以上</option><option value="50">50%以上</option><option value="70">70%以上</option></select></label><label>終了まで<select name="deadline"><option value="">すべて（期限未定を含む）</option><option value="0">今日まで</option><option value="3">3日以内</option><option value="7">7日以内</option><option value="14">14日以内</option></select></label><label>開催状況<select name="status"><option value="live">開催中・開催予定</option><option value="active">開催中のみ</option><option value="upcoming">開催予定のみ</option><option value="ended">終了したセール</option><option value="all">すべて</option></select></label><label class="check-label"><input type="checkbox" name="onlySaved">気になるものだけ</label><p class="filter-note">割引率が不明な特典や増量特典は、割引率の絞り込みから除外します。</p></form></details><div class="watch-note"><strong>PALが見つけて、ここに。</strong><p>巡回は毎日8:13 JSTに1回。新着は巡回後に反映されます。</p></div></aside>
+      <section class="results" aria-label="セール一覧"><div class="tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="サービス名・キーワードで探す" aria-label="サービス名・キーワードで探す"></label><label class="sort-label">並び替え<select id="sort"><option value="deadline">期限が近い順</option><option value="discount">割引率が高い順</option><option value="new">新着を先に</option><option value="name">名前順</option></select></label></div><div class="results-heading"><div><h2>セール一覧</h2><span id="result-count" aria-live="polite">読み込み中</span></div><span class="timezone">期限は日本時間</span></div><div id="active-filters" class="active-filters"></div><div id="cards" class="cards" aria-live="polite"><p>セールを読み込んでいます…</p></div><div id="empty" class="empty" hidden><span>見つかりませんでした</span><p>キーワードや絞り込みを少し変えてみてください。</p><button class="button" id="empty-reset" type="button">条件をリセット</button></div><p class="data-note">掲載内容はPALの調査メモに基づきます。利用資格・地域・更新後の料金は出典をご確認ください。期限の日付のみ判明しているものは、その日の23:59 JSTとして表示します。</p></section>
+    </div>
+  </main>
+  <footer><a class="brand footer-brand" href="./">PAL <span>セールノート</span></a><span>閲覧専用 · 購入・登録は行いません</span><a href="https://github.com/Okuno613/pal-sale-dashboard/issues" target="_blank" rel="noopener noreferrer">改善をリクエスト ↗</a></footer>
+  <dialog id="detail"><button id="close-detail" type="button" class="close-button" aria-label="詳細を閉じる">×</button><div id="detail-content"></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
