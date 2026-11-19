@@ -1719,5 +1719,23 @@
     "url": "https://proxyman.com/pricing",
     "monogram": "Px",
     "checkedAt": "2026-11-19"
+  },
+  {
+    "id": "pascal-free",
+    "serviceSummary": "建築・間取りの3Dモデルを作るオープンソースのブラウザーエディタ。AIで壁・部屋・家具等を生成・編集できる。",
+    "serviceUrl": "https://editor.pascal.app/",
+    "campaignType": "無料枠",
+    "name": "Pascal Editor · 個人無料枠",
+    "group": "AIサービス",
+    "field": "3D・建築",
+    "offerType": "無料クレジット",
+    "benefit": "通常150クレジット/日",
+    "description": "エディタ内のAIチャット・Studio等に使える無料枠。モデル・出力量で消費量が変わり、主要モデルの無制限無料開放ではない。手動編集・共有は無料。",
+    "conditions": "個人向け・ログイン必須。通常UTC 0時（日本時間9時）に150まで補充し、持越し不可。登録後7日間は日ごとの積立式・週上限あり（メール登録は少なめ）。無料分はブラウザー内のみで、API・MCP・CLIや組織プロジェクトは対象外。Pro機能は別料金。運営表記はPascal Group Inc.。AI入力・関連データは外部AIへ送信され、履歴も保存される。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://editor.pascal.app/docs/account/credits",
+    "monogram": "Pa",
+    "checkedAt": "2026-11-19"
   }
 ]
