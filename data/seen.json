@@ -99,7 +99,52 @@
       "name": "Nous Portal Hy4 Flash free 2 weeks",
       "url": "https://x.com/NousResearch/status/2122411675412463689",
       "deadline": "2026-11-30"
+    },
+    {
+      "name": "Devin SWE-2 free for self-serve plans",
+      "url": "https://docs.devin.ai/desktop/chat/models",
+      "deadline": "2026-11-30",
+      "titleJa": "Devin Desktop / CLI · SWE-2 無料",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "無料利用",
+      "benefit": "対象プランでコーディングモデルSWE-2が期間限定で無料",
+      "conditions": "セルフサービスプランのDevin Desktop・CLIが対象。Devinクラウドセッションは対象外。",
+      "checkedAt": "2026-11-20",
+      "serviceSummary": "Devin DesktopとCLIは、コードの作成や修正を支援するAI開発エージェントです。",
+      "serviceUrl": "https://devin.ai/pricing",
+      "campaignType": "期間限定モデル無料"
+    },
+    {
+      "name": "Perplexity annual plans bonus Computer credits",
+      "url": "https://www.perplexity.ai/pro",
+      "deadline": null,
+      "titleJa": "Perplexity 年額プラン · Computerクレジット特典",
+      "group": "AIサービス",
+      "field": "総合AI",
+      "offerType": "クレジット",
+      "benefit": "Pro年額に$40分、Max年額に$450分のComputerクレジット",
+      "conditions": "公式ページの年額換算はProが月$17、Maxが月$167。Maxの特典は期間限定表記で、終了日の記載なし。",
+      "checkedAt": "2026-11-20",
+      "serviceSummary": "複数のAIモデルで調査できる検索・回答サービス。Computerで資料やアプリを作成できます。",
+      "serviceUrl": "https://www.perplexity.ai/pro",
+      "campaignType": "年額プラン＋クレジット特典"
+    },
+    {
+      "name": "JoggAI Black Friday up to double video credits",
+      "url": "https://www.jogg.ai/black-friday/",
+      "deadline": "2026-12-04",
+      "titleJa": "JoggAI ブラックフライデー · 動画クレジット最大2倍",
+      "group": "AIサービス",
+      "field": "画像・動画",
+      "offerType": "クレジット",
+      "benefit": "対象プランの動画制作クレジットを同じ料金で最大100%増量",
+      "conditions": "新規契約・対象アップグレード限定。増量率は抽選で決まり、同じプランと請求周期での対象更新にも適用。12月4日23:59（米国東部標準時）まで。",
+      "checkedAt": "2026-11-20",
+      "serviceSummary": "AIアバターを使ってプレゼンター付きの動画を作成するサービスです。",
+      "serviceUrl": "https://www.jogg.ai/black-friday/",
+      "campaignType": "ブラックフライデー"
     }
   ],
-  "checked_at": null
+  "checked_at": "2026-11-19T23:16:48+00:00"
 }
