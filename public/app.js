@@ -120,7 +120,7 @@ function updateFreshness(payload, error = false) {
   let warning = '';
   if (error) warning = '再読み込みに失敗しました。表示中のデータを残しています。時間をおいて再度お試しください。';
   else if (!payload.sourceAvailable) warning = '新着フィードを読み込めません。保存済みの調査メモのみ表示しています。';
-  else if (stamp && Date.now() - Date.parse(stamp) > 24 * 60 * 60 * 1000) warning = '最終同期から24時間以上経っています。新着がまだ反映されていない可能性があります。';
+  else if (stamp && Date.now() - Date.parse(stamp) > 30 * 60 * 60 * 1000) warning = '最終同期から30時間以上経っています。新着がまだ反映されていない可能性があります。';
   $('#feed-warning').textContent = warning; $('#feed-warning').hidden = !warning;
 }
 async function load() {
