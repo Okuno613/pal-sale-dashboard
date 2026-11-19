@@ -1737,5 +1737,42 @@
     "url": "https://editor.pascal.app/docs/account/credits",
     "monogram": "Pa",
     "checkedAt": "2026-11-19"
+  },
+  {
+    "id": "cent-ai-daily-draw",
+    "serviceSummary": "複数モデルのAPIを1つにまとめる前払い型ゲートウェイ。OpenAI・Anthropic互換で開発ツールから利用。",
+    "serviceUrl": "https://cent-ai.dev/",
+    "campaignType": "無料枠",
+    "name": "Cent AI · 日替わり抽選枠",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "無料クレジット",
+    "benefit": "平日10億 / 週末20億token共有",
+    "description": "毎日抽選の1モデルが対象。無料トークンは全利用者で共有する先着プールで、1人ごとの付与量や無制限利用ではない。",
+    "conditions": "GitHubまたはGoogleでのアカウント作成・APIキー必須。対象モデルIDの末尾に:freeを付けて利用し、通常IDは有料。UTC 0時（日本時間9時）更新。共有枠が尽きると当日は429で停止。期限固定の無料モデルは抽選対象外。内容は変更・終了の可能性あり。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://cent-ai.dev/event",
+    "monogram": "Ce",
+    "checkedAt": "2026-11-19"
+  },
+  {
+    "id": "cent-ai-hy4-flash",
+    "serviceSummary": "複数モデルのAPIを1つにまとめる前払い型ゲートウェイ。OpenAI・Anthropic互換で開発ツールから利用。",
+    "serviceUrl": "https://cent-ai.dev/",
+    "campaignType": "モデル公開・無料開放",
+    "name": "Cent AI · Hy4 Flash無料企画",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "期間限定無料",
+    "benefit": "1日の回数制限なし",
+    "description": "Hy4 Flashを期間限定で無料提供。日替わり抽選の共有プールとは別の企画で、全モデルや無期限の無料利用ではない。",
+    "conditions": "アカウント作成・APIキー必須。無料対象IDはhy4-flash:free。他モデル・有料IDの利用は別料金。終了は日本時間12/1 1:59:59（公式表記は11/30まで）。内容は変更・早期終了の可能性あり。",
+    "discount": null,
+    "deadline": "2026-11-30T16:59:59Z",
+    "url": "https://cent-ai.dev/",
+    "monogram": "Ce",
+    "checkedAt": "2026-11-19",
+    "preciseDeadline": true
   }
 ]
