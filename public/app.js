@@ -148,7 +148,7 @@ for (const button of document.querySelectorAll('[data-quick]')) button.addEventL
   form.reset(); $('#search').value = ''; $('#sort').value = 'deadline';
   if (button.dataset.quick === 'soon') form.elements.deadline.value = '3';
   if (button.dataset.quick === 'annual') form.elements.offerType.value = '年額';
-  if (button.dataset.quick === 'saved') form.elements.onlySaved.checked = true;
+  if (button.dataset.quick === 'saved') { form.elements.onlySaved.checked = true; form.elements.status.value = 'all'; }
   render(); $('.results').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 document.addEventListener('visibilitychange', () => { if (!document.hidden) { updateToday(); load(); } });
