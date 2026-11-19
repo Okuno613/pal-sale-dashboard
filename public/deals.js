@@ -33,7 +33,7 @@ export function mergeDeals(feed, catalog) {
     if (existing) {
       // Curated records may have a more precise timestamp or split offers at one URL.
       if (Object.hasOwn(raw, 'deadline') && (!existing.preciseDeadline || raw.deadline?.includes('T'))) existing.deadline = raw.deadline;
-      for (const key of ['group', 'field', 'offerType', 'benefit', 'description', 'conditions', 'starts', 'checkedAt']) {
+      for (const key of ['group', 'field', 'offerType', 'benefit', 'description', 'conditions', 'starts', 'checkedAt', 'serviceSummary', 'serviceUrl', 'campaignType']) {
         if (typeof raw[key] === 'string') existing[key] = raw[key];
       }
       if (typeof raw.titleJa === 'string') existing.name = raw.titleJa;
@@ -49,9 +49,10 @@ export function mergeDeals(feed, catalog) {
       discount: typeof raw.discount === 'number' && raw.discount >= 0 && raw.discount <= 100 ? raw.discount : null,
       deadline: raw.deadline || null, starts: raw.starts || null,
       conditions: raw.conditions || '詳細な条件・割引率は出典をご確認ください。',
+      serviceSummary: raw.serviceSummary || '', serviceUrl: raw.serviceUrl || null, campaignType: raw.campaignType || '未確認',
       url: raw.url, checkedAt: raw.checkedAt || null, fresh: true });
   }
-  return result.map(d => ({ ...d, url: safeUrl(d.url) }));
+  return result.map(d => ({ ...d, url: safeUrl(d.url), serviceUrl: safeUrl(d.serviceUrl) }));
 }
 
 export function filterDeals(deals, filters, now = Date.now()) {
@@ -65,13 +66,14 @@ export function filterDeals(deals, filters, now = Date.now()) {
     if (filters.group && d.group !== filters.group) return false;
     if (filters.field && d.field !== filters.field) return false;
     if (filters.offerType && d.offerType !== filters.offerType) return false;
+    if (filters.campaignType && d.campaignType !== filters.campaignType) return false;
     if (filters.minDiscount && (d.discount == null || d.discount < Number(filters.minDiscount))) return false;
     if (filters.deadline) {
       const days = daysLeft(d, now);
       if (days === null || status === 'ended' || days > Number(filters.deadline)) return false;
     }
     if (filters.onlySaved && !filters.saved?.includes(d.id)) return false;
-    return !query || [d.name, d.description, d.benefit, d.conditions, d.field].join(' ').toLocaleLowerCase('ja').includes(query);
+    return !query || [d.name, d.description, d.benefit, d.conditions, d.field, d.serviceSummary, d.campaignType].join(' ').toLocaleLowerCase('ja').includes(query);
   });
 }
 

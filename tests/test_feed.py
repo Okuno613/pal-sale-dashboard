@@ -38,6 +38,15 @@ class FeedTests(unittest.TestCase):
             build(root)
             self.assertEqual(len(json.loads((output / 'deals.json').read_text())['seen']), 2)
 
+    def test_official_context_is_allowed_but_unsafe_service_sources_are_rejected(self):
+        record = {'name': 'Sale', 'url': 'https://example.com/sale',
+                  'serviceSummary': 'AI development tool', 'serviceUrl': 'https://example.com/',
+                  'campaignType': 'Launch offer'}
+        self.assertEqual(sanitize({'seen': [record]})['seen'][0], record)
+        for source in ['javascript:alert(1)', 'https://user:secret@example.com/']:
+            with self.assertRaises(ValueError):
+                sanitize({'seen': [{**record, 'serviceUrl': source}]})
+
     def test_catalog_has_unique_ids_and_no_bonus_as_discount(self):
         catalog = json.loads((Path(__file__).resolve().parents[1] / 'data/catalog.json').read_text())
         self.assertEqual(len(catalog), len({d['id'] for d in catalog}))
