@@ -141,7 +141,7 @@ async function load() {
 function updateToday() { $('#today').textContent = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: 'long', day: 'numeric', weekday: 'short' }).format(Date.now()); }
 form.addEventListener('change', render); form.addEventListener('submit', e => e.preventDefault());
 $('#search').addEventListener('input', render); $('#sort').addEventListener('change', render);
-$('#reset').addEventListener('click', reset); $('#empty-reset').addEventListener('click', reset);
+$('#clear-filters').addEventListener('click', reset); $('#empty-reset').addEventListener('click', reset);
 $('#refresh').addEventListener('click', load); $('#close-detail').addEventListener('click', () => $('#detail').close());
 $('#detail').addEventListener('click', e => { if (e.target === $('#detail')) { const rect = $('#detail').getBoundingClientRect(); if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) $('#detail').close(); } });
 for (const button of document.querySelectorAll('[data-quick]')) button.addEventListener('click', () => {
