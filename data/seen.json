@@ -161,7 +161,61 @@
       "serviceSummary": "OpenCodeなどの開発エージェント向けに、複数モデルの利用枠を月額でまとめて提供するサービス。",
       "serviceUrl": "https://opencode.ai/console/go",
       "campaignType": "期間限定モデル割引"
+    },
+    {
+      "name": "Google AI member early access up to 50% off",
+      "url": "https://one.google.com/about/google-ai-plans/",
+      "deadline": "2026-11-26",
+      "titleJa": "Google AI Plus・年額AI Pro 既存会員向け最大50%オフ",
+      "group": "AIサービス",
+      "field": "総合AI",
+      "offerType": "年額割引",
+      "benefit": "Google AI Plusと年額Google AI Proが最大50%オフ（会員先行）",
+      "description": "Googleのブラックフライデー先行セール。既存のGoogle AI／ストレージ（Google One）契約者が対象で、未契約者向けのオファーは11/27から始まる予定。",
+      "conditions": "現在のAI・ストレージ契約者限定で、割引率は契約中プランにより異なる。Google（Geminiサブスク責任者Vikas Kansal氏）のX投稿では11/26まで（米国時間、終了時刻の明記なし）。日本での提供可否と割引後価格は未確認。プランページのバナーは今回の取得では確認できず。",
+      "discount": 50,
+      "starts": "2026-11-20",
+      "checkedAt": "2026-11-21",
+      "serviceSummary": "GeminiアプリやGoogle Flow、Antigravityなどの上位モデル利用枠とGoogle Oneのクラウドストレージをまとめた、GoogleのAIサブスクリプション。",
+      "serviceUrl": "https://gemini.google/subscriptions/",
+      "campaignType": "ブラックフライデー"
+    },
+    {
+      "name": "Devin Bot free credits via Poke pitch",
+      "url": "https://poke.com/bots",
+      "deadline": "2026-11-23T17:00:00+09:00",
+      "titleJa": "Pokeに企画を売り込んでDevin Botを無料で使う",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "クレジット",
+      "benefit": "Devin Botの無料利用（1アカウント最大$10,000分のクレジット、多くは1か月分のDevin Max相当）",
+      "description": "Cognitionのキャンペーン。Apple MessagesでPokeに作りたいものを売り込み、交渉した分のDevin Botクレジットがもらえる。Devin Botは通常は月$200以上のプラン向け。",
+      "conditions": "Apple Messages（iMessage）限定。先着1万アカウントで、枠は順次開放。受け取りにはDevinアカウントでのStripe登録が必要。締切は報道ベースで太平洋時間11/23 0:00（日本時間11/23 17:00）、公式ページに期限の記載なし。",
+      "discount": null,
+      "starts": "2026-11-18",
+      "checkedAt": "2026-11-21",
+      "serviceSummary": "Devin Botは、Slack・Linear・Sentryなどから仕事を拾い、複数のDevinセッションを並行で動かして開発を進める常駐型のAIエンジニアリングエージェント。",
+      "serviceUrl": "https://devin.ai/bots",
+      "campaignType": "プラン＋クレジット配布"
+    },
+    {
+      "name": "Sakura AI Engine GLM-5.3-Flash / DeepSeek-V4.1-Flash free preview",
+      "url": "https://cloud.sakura.ad.jp/news/2026/11/18/glm-5-3-flash_deepseek-v4-1-flash-1017_pubpreview/",
+      "deadline": null,
+      "titleJa": "さくらのAI Engine GLM-5.3-Flash・DeepSeek-V4.1-Flash 月3,000リクエスト無料",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "無料利用",
+      "benefit": "GLM-5.3-FlashとDeepSeek-V4.1-Flash-1017が月3,000リクエストまで無料",
+      "description": "さくらインターネットの推論API「さくらのAI Engine」に追加された2モデルのパブリックプレビュー。無償枠を超えた分は従量課金。",
+      "conditions": "無償プランは1か月あたり3,000リクエストまで。超過分は入力1万トークン0.4円・出力1万トークン4.0円（税込）。プレビュー期間の終了日は公式に記載なし。国内データセンターで運用。",
+      "discount": null,
+      "starts": "2026-11-18",
+      "checkedAt": "2026-11-21",
+      "serviceSummary": "さくらインターネットが国内データセンターで運用する、複数の生成AIモデルやRAG機能をAPIで使える推論API基盤。",
+      "serviceUrl": "https://ai.sakura.ad.jp/sakura-ai/ai-engine/",
+      "campaignType": "新モデル公開プレビュー"
     }
   ],
-  "checked_at": "2026-11-20T03:15:49+00:00"
+  "checked_at": "2026-11-20T23:17:17+00:00"
 }
