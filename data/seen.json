@@ -8,12 +8,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "クレジット",
-      "campaignType": "期間限定・利用枠拡大",
       "benefit": "最大$500相当",
       "description": "Go 月$10でGLM-5.3の利用枠が拡大。Plusは月$40で最大$1,000相当。",
       "conditions": "GLM単独利用時の上限であり、自由に使える残高ではありません。",
       "serviceSummary": "開発向けのモデル定額枠。GLM・DeepSeekなどをOpenCode経由で利用。",
-      "serviceUrl": "https://opencode.ai/docs/console/go/"
+      "serviceUrl": "https://opencode.ai/docs/console/go/",
+      "campaignType": "期間限定・利用枠拡大"
     },
     {
       "name": "Qwen Token Plan new-user half price",
@@ -23,12 +23,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "初月",
-      "campaignType": "新規ユーザー特典",
       "benefit": "新規 50% OFF",
       "description": "Lite $3/月、Essential $5/月の新規ユーザー向け特典。",
       "conditions": "月額プランのみ。日本から利用可。11/30 23:59 UTC+8 = 12/1 00:59 JST。",
       "serviceSummary": "開発ツール向けのモデル定額枠。文章・画像・音声などのモデルに対応。",
-      "serviceUrl": "https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview"
+      "serviceUrl": "https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview",
+      "campaignType": "新規ユーザー特典"
     },
     {
       "name": "Adobe CC Pro first year 44,118 JPY",
@@ -38,12 +38,12 @@
       "group": "ソフトウェア",
       "field": "画像・動画",
       "offerType": "年額",
-      "campaignType": "初年度割引",
       "benefit": "初年度 44,118円",
       "description": "Creative Cloud Proの初年度向け特別価格。",
       "conditions": "初年度のみ。翌年以降の料金・契約条件は出典をご確認ください。",
       "serviceSummary": "画像・動画などの制作ソフトをまとめたAdobeのサブスクリプション。",
-      "serviceUrl": "https://www.adobe.com/jp/creativecloud.html"
+      "serviceUrl": "https://www.adobe.com/jp/creativecloud.html",
+      "campaignType": "初年度割引"
     },
     {
       "name": "ElevenLabs Creator first year $99",
@@ -53,12 +53,12 @@
       "group": "AIサービス",
       "field": "音声",
       "offerType": "年額",
-      "campaignType": "ブラックフライデー",
       "benefit": "55% OFF",
       "description": "Creatorプランが初年度 $99。音声生成を年額で。",
       "conditions": "初年度の年額特典。更新料金・対象者は出典をご確認ください。",
       "serviceSummary": "音声生成・読み上げ・吹替のAI。音声制作や会話エージェント向け。",
-      "serviceUrl": "https://elevenlabs.io/"
+      "serviceUrl": "https://elevenlabs.io/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "Sourcenext 1Password/Dropbox 3-year",
@@ -68,12 +68,12 @@
       "group": "ソフトウェア",
       "field": "仕事・生活",
       "offerType": "複数年",
-      "campaignType": "ブラックフライデー",
       "benefit": "44% OFF",
       "description": "ソースネクストで3年版が9,980円。",
       "conditions": "11/20〜29の販売予定。対象製品・利用条件は販売元で要確認。",
       "serviceSummary": "パスワード・パスキーなどの認証情報を保管・管理するサービス。",
-      "serviceUrl": "https://1password.com/"
+      "serviceUrl": "https://1password.com/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "OpenArt annual up to 40% off",
@@ -83,12 +83,12 @@
       "group": "AIサービス",
       "field": "画像・動画",
       "offerType": "年額",
-      "campaignType": "ブラックフライデー",
       "benefit": "最大40% OFF",
       "description": "個人向け年払いプランが初年度割引。",
       "conditions": "割引率は対象プランによって異なります。初年度のみ。",
       "serviceSummary": "画像・動画のAI制作ツール。Veo・Kling・Wanなどのモデルを選択。",
-      "serviceUrl": "https://openart.ai/"
+      "serviceUrl": "https://openart.ai/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "Kimi K2.8 Preview credits 50% off",
@@ -98,12 +98,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "クレジット",
-      "campaignType": "モデル限定割引",
       "benefit": "50% OFF",
       "description": "会員向けK2.8 Previewのクレジット割引。",
       "conditions": "対象モデルのクレジット特典。年額プランの半額セールではありません。",
       "serviceSummary": "MoonshotのAI。Kimiモデルでチャットやコーディングを支援。",
-      "serviceUrl": "https://www.kimi.com/code"
+      "serviceUrl": "https://www.kimi.com/code",
+      "campaignType": "モデル限定割引"
     },
     {
       "name": "Kiro Pro free trial + 500 credits",
@@ -113,12 +113,12 @@
       "group": "AIサービス",
       "field": "開発エージェント",
       "offerType": "無料体験",
-      "campaignType": "無料体験",
       "benefit": "初月無料 + 500 credits",
       "description": "Proプランのお試しと追加クレジット。",
       "conditions": "対象アカウント・試用後の料金は出典で確認。終了日は未確認。",
       "serviceSummary": "AI開発エージェント。仕様・計画から実装、レビュー、検証まで支援。",
-      "serviceUrl": "https://kiro.dev/"
+      "serviceUrl": "https://kiro.dev/",
+      "campaignType": "無料体験"
     },
     {
       "name": "Codex Business credits GPT-5.6 Sol price cut",
@@ -128,12 +128,12 @@
       "group": "AIサービス",
       "field": "開発エージェント",
       "offerType": "クレジット",
-      "campaignType": "期間限定・モデル割引",
       "benefit": "クレジット単価値下げ",
       "description": "GPT-5.6 SolのBusinessクレジット消費が期間限定で割引。",
       "conditions": "Business / Enterprise・Eduの従量クレジット料金。割引率は未整理。",
       "serviceSummary": "OpenAIの開発エージェント。コードの理解・実装・レビュー・修正を支援。",
-      "serviceUrl": "https://developers.openai.com/codex/"
+      "serviceUrl": "https://developers.openai.com/codex/",
+      "campaignType": "期間限定・モデル割引"
     },
     {
       "name": "Claude usage bundles 10-30% off",
@@ -143,12 +143,12 @@
       "group": "AIサービス",
       "field": "総合AI",
       "offerType": "クレジット",
-      "campaignType": "まとめ買い割引",
       "benefit": "10〜30% OFF",
       "description": "追加利用のバンドル購入が割引。",
       "conditions": "通常の月額・年額プランではなく追加利用分。割引率はバンドルごとに異なります。",
       "serviceSummary": "AnthropicのAI。文書作成、情報整理、分析、開発などの作業を支援。",
-      "serviceUrl": "https://claude.com/product/overview"
+      "serviceUrl": "https://claude.com/product/overview",
+      "campaignType": "まとめ買い割引"
     },
     {
       "name": "Google AI Pro 6 months with Pixel 11 Pro",
@@ -158,12 +158,12 @@
       "group": "AIサービス",
       "field": "総合AI",
       "offerType": "端末特典",
-      "campaignType": "端末購入特典",
       "benefit": "6か月無料",
       "description": "Pixel 11 Pro購入者向けのGoogle AI Pro特典。",
       "conditions": "対象端末の購入が必要。対象地域・既存会員の適用条件は要確認。",
       "serviceSummary": "GeminiやNotebookLMなどを利用できるGoogleの有料AIプラン。",
-      "serviceUrl": "https://one.google.com/about/google-ai-plans/"
+      "serviceUrl": "https://one.google.com/about/google-ai-plans/",
+      "campaignType": "端末購入特典"
     },
     {
       "name": "Manus welcome back 50-90% off",
@@ -173,12 +173,12 @@
       "group": "AIサービス",
       "field": "開発エージェント",
       "offerType": "初月",
-      "campaignType": "復帰ユーザー特典",
       "benefit": "50〜90% OFF",
       "description": "対象の復帰ユーザー向け初月割引。",
       "conditions": "サービス変更の影響を受けた対象ユーザー限定。期限は11/23ごろの目安。",
       "serviceSummary": "調査・スライド・Webサイト制作などを進める汎用AIエージェント。",
-      "serviceUrl": "https://manus.im/"
+      "serviceUrl": "https://manus.im/",
+      "campaignType": "復帰ユーザー特典"
     },
     {
       "name": "OpenRouter Hy4 Flash 50% off",
@@ -188,12 +188,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "API割引",
-      "campaignType": "期間限定・モデル割引",
       "benefit": "50% OFF",
       "description": "対象モデルHy4 FlashのAPI利用料金が半額。",
       "conditions": "対象モデルのみ。通常のチャージ手数料5.5%は別。",
       "serviceSummary": "複数社のモデルを1つのAPIで使うアグリゲータ。文章・画像・音声等に対応。",
-      "serviceUrl": "https://openrouter.ai/"
+      "serviceUrl": "https://openrouter.ai/",
+      "campaignType": "期間限定・モデル割引"
     },
     {
       "name": "OpenModel Black Friday top-up bonus",
@@ -203,12 +203,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "チャージ増量",
-      "campaignType": "ブラックフライデー",
       "benefit": "最大20% 増量",
       "description": "$50 / $200 / $500 / $1,000以上のチャージで増量。",
       "conditions": "順に10 / 15 / 18 / 20%増量。値引き率ではありません。日本対応。",
       "serviceSummary": "複数社のモデルAPIをまとめるゲートウェイ。1つのキーで利用・課金を管理。",
-      "serviceUrl": "https://www.openmodel.ai/"
+      "serviceUrl": "https://www.openmodel.ai/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "OpenCode Hy4 Flash free 10 days",
@@ -218,12 +218,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "期間限定無料",
-      "campaignType": "モデル公開・無料開放",
       "benefit": "10日間無料",
       "description": "発表から10日間、Hy4 Flashを無料開放。",
       "conditions": "対象モデルの利用特典。GoのGLM利用枠特典とは別です。",
       "serviceSummary": "オープンソースの開発エージェント。多数のモデル提供元をつなげて利用。",
-      "serviceUrl": "https://opencode.ai/"
+      "serviceUrl": "https://opencode.ai/",
+      "campaignType": "モデル公開・無料開放"
     },
     {
       "name": "Vercel AI Gateway Hy4/Hy4 Flash 50% off",
@@ -233,12 +233,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "API割引",
-      "campaignType": "期間限定・モデル割引",
       "benefit": "50% OFF",
       "description": "Hy4のAPI利用が期間限定で半額。",
       "conditions": "Hy4 Flashの半額期間とは終了日が異なります。",
       "serviceSummary": "開発者向けのマルチモデルAPI。モデル切替・障害時の切替・利用量管理に対応。",
-      "serviceUrl": "https://vercel.com/ai-gateway"
+      "serviceUrl": "https://vercel.com/ai-gateway",
+      "campaignType": "期間限定・モデル割引"
     },
     {
       "name": "CometAPI Black Friday 5-10% off",
@@ -248,12 +248,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "API割引",
-      "campaignType": "ブラックフライデー",
       "benefit": "5〜10% OFF",
       "description": "GPT・Gemini・Grokなど14モデルが対象。",
       "conditions": "同社の通常価格との比較。「最大28%」はモデル定価比の別指標。",
       "serviceSummary": "GPT・Claude・Geminiなどを1つのAPIで呼び出すアグリゲータ。",
-      "serviceUrl": "https://www.cometapi.com/"
+      "serviceUrl": "https://www.cometapi.com/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "HiAPI DeepSeek V4.1 Flash free daily",
@@ -263,12 +263,12 @@
       "group": "AIサービス",
       "field": "開発・API",
       "offerType": "期間限定無料",
-      "campaignType": "ブラックフライデー",
       "benefit": "1日1,000万tokens無料",
       "description": "DeepSeek V4.1 Flashの期間限定無料枠。",
       "conditions": "チャージ経験のあるアカウントのみ。11/24 17:00〜12/1 16:59 JST。",
       "serviceSummary": "複数の生成AIモデルを扱うAPIサービス。画像・動画・音声などに対応。",
-      "serviceUrl": "https://hiapi.ai/ja/promotions/black-friday-2026"
+      "serviceUrl": "https://hiapi.ai/ja/promotions/black-friday-2026",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "TypingMind lifetime 60% off",
@@ -278,12 +278,12 @@
       "group": "ソフトウェア",
       "field": "総合AI",
       "offerType": "買い切り",
-      "campaignType": "ブラックフライデー",
       "benefit": "60% OFF",
       "description": "買い切りPremiumが約$79。コード BLACKFRIDAY2026。",
       "conditions": "APIの利用料金は別途必要です。",
       "serviceSummary": "複数モデルを使い分けるチャットUI。GPT・Claude・Gemini等をAPI接続。",
-      "serviceUrl": "https://www.typingmind.com/"
+      "serviceUrl": "https://www.typingmind.com/",
+      "campaignType": "ブラックフライデー"
     },
     {
       "name": "Nous Portal Hy4 Flash free 2 weeks",
@@ -293,12 +293,12 @@
       "group": "AIサービス",
       "field": "総合AI",
       "offerType": "期間限定無料",
-      "campaignType": "モデル公開・無料開放",
       "benefit": "2週間無料",
       "description": "11/16からHy4 Flashを期間限定で開放。",
       "conditions": "期限は保存された巡回データに基づきます。正確な終了時刻は未確認。",
       "serviceSummary": "Hermes Agent向けのモデル・ツール基盤。Claude・GPT等のモデルに対応。",
-      "serviceUrl": "https://portal.nousresearch.com/"
+      "serviceUrl": "https://portal.nousresearch.com/",
+      "campaignType": "モデル公開・無料開放"
     },
     {
       "name": "Devin SWE-2 free for self-serve plans",
@@ -415,7 +415,110 @@
       "serviceSummary": "さくらインターネットが国内データセンターで運用する、複数の生成AIモデルやRAG機能をAPIで使える推論API基盤。",
       "serviceUrl": "https://ai.sakura.ad.jp/sakura-ai/ai-engine/",
       "campaignType": "新モデル公開プレビュー"
+    },
+    {
+      "name": "Nous Portal Qwen4-Max free for 5 days",
+      "url": "https://portal.nousresearch.com/models",
+      "deadline": null,
+      "titleJa": "Nous Portal · Qwen4-Max 無料",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "期間限定無料",
+      "benefit": "画像入力・100万トークン対応のQwen4-Maxが5日間無料",
+      "description": "Alibabaの旗艦モデルQwen4-Maxの無料ルート（qwen/qwen4-max:free）を公開。",
+      "conditions": "無料プランで利用可。5日間の発表から終了は11月24日ごろ（日本時間の目安）。正確な終了時刻と利用上限は未公表。",
+      "discount": null,
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "Hermes Agentなどに複数のAIモデルを提供するNous Researchのモデル基盤。",
+      "serviceUrl": "https://portal.nousresearch.com/",
+      "campaignType": "期間限定モデル無料"
+    },
+    {
+      "name": "Alibaba Cloud Token Plan Qwen4-Max Preview credit discount",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/token-plan-product-updates",
+      "deadline": "2026-11-26T01:00:00+09:00",
+      "titleJa": "Alibaba Cloud Token Plan · Qwen4-Max Preview 割引",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "モデル割引",
+      "benefit": "対象モデルの消費クレジットが通常の最大92%減",
+      "description": "Qwen4-Max Previewの消費クレジットは最少で通常の20%。Personal Editionは日本時間23:00〜翌9:00にさらに60%引きで、通常の8%に。",
+      "conditions": "Token Plan Personal・Team Editionが対象。深夜の追加割引はPersonalのみ。プレビューは11月26日01:00（日本時間）に終了。",
+      "discount": 92,
+      "starts": "2026-11-11T11:00:00+09:00",
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "QwenやDeepSeekなどを開発ツールで使うためのAlibaba Cloudのクレジット制モデルプラン。",
+      "serviceUrl": "https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview",
+      "campaignType": "新モデル公開プレビュー"
+    },
+    {
+      "name": "GitHub Copilot Fusion model usage 30% off",
+      "url": "https://docs.github.com/en/copilot/concepts/models/copilot-fusion",
+      "deadline": null,
+      "titleJa": "GitHub Copilot Fusion · モデル利用料30%オフ",
+      "group": "AIサービス",
+      "field": "開発エージェント",
+      "offerType": "モデル割引",
+      "benefit": "有料CopilotプランでFusion経由のモデル利用料が30%オフ",
+      "description": "Copilot Fusionで使ったモデルの単価を割引。Copilotプラン自体の料金は対象外。",
+      "conditions": "公式表記は11月30日まで。終了時刻・タイムゾーンが未公表のため日本時間の締切は未確定。High・Maxでは1回に複数モデル分を消費する場合があります。",
+      "discount": 30,
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "GitHub Copilotはコード補完・開発支援サービス。Fusionはタスクに合わせてモデルを自動選択します。",
+      "serviceUrl": "https://github.com/features/copilot",
+      "campaignType": "期間限定モデル割引"
+    },
+    {
+      "name": "Recraft Black Friday annual plans 40% off",
+      "url": "https://www.recraft.ai/pricing",
+      "deadline": "2026-12-02T16:59:00+09:00",
+      "titleJa": "Recraft ブラックフライデー · 年額初年度40%オフ",
+      "group": "AIサービス",
+      "field": "画像・動画",
+      "offerType": "年額割引",
+      "benefit": "新規年額プランの初年度が40%オフ",
+      "description": "画像やベクターを生成・編集できるRecraftの年額プランが初年度のみ40%引き。",
+      "conditions": "現在の年額契約者は対象外。一部の国は対象外で、日本での適用は未確認。他の割引との併用不可。2年目から通常価格。",
+      "discount": 40,
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "画像・ベクターの生成、編集、背景除去などに対応したAIデザインサービス。",
+      "serviceUrl": "https://www.recraft.ai/",
+      "campaignType": "ブラックフライデー"
+    },
+    {
+      "name": "OpenRouter Perplexity Decider V1.3 free extension",
+      "url": "https://openrouter.ai/perplexity/pplx-decider-v1.3:free",
+      "deadline": null,
+      "titleJa": "OpenRouter · Perplexity Decider V1.3／Flash 無料延長",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "期間限定無料",
+      "benefit": "Decider V1.3とFlashの無料提供を3週間延長",
+      "description": "エージェントの分岐や分類に使うPerplexityの判断モデルを、OpenRouterの無料ルートで試せます。",
+      "conditions": "無料の :free 版が対象。日本時間11月20日の公式発表から12月11日ごろまでが目安。正確な終了時刻は未公表。",
+      "discount": null,
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "複数のプロバイダーのAIモデルを1つのAPIで使えるサービス。",
+      "serviceUrl": "https://openrouter.ai/",
+      "campaignType": "期間限定モデル無料"
+    },
+    {
+      "name": "Packet Token Factory free until December 16",
+      "url": "https://packet.ai/token-factory-free",
+      "deadline": "2026-12-16T09:00:00+09:00",
+      "titleJa": "packet.ai Token Factory · モデルAPI無料",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "期間限定無料",
+      "benefit": "DeepSeek V4.1 Flash、MiniMax M3.1 Flash、Qwen2.5 1.5Bの入出力が無料",
+      "description": "OpenAI互換の推論API。無料期間中は既存・新規アカウントとも対象モデルの入出力が$0。",
+      "conditions": "APIキー発行に電話番号認証が必要。カード不要。日本時間12月16日09:00から従量課金。近日提供予定のKimi K3は今回の対象外。",
+      "discount": null,
+      "checkedAt": "2026-11-22",
+      "serviceSummary": "GPUクラウドのpacket.aiが、オープンウェイトモデルを提供するサーバーレス推論API。",
+      "serviceUrl": "https://packet.ai/token-factory",
+      "campaignType": "期間限定モデル無料"
     }
   ],
-  "checked_at": "2026-11-20T23:17:17+00:00"
+  "checked_at": "2026-11-21T23:16:59+00:00"
 }
