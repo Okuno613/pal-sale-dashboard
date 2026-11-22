@@ -518,7 +518,58 @@
       "serviceSummary": "GPUクラウドのpacket.aiが、オープンウェイトモデルを提供するサーバーレス推論API。",
       "serviceUrl": "https://packet.ai/token-factory",
       "campaignType": "期間限定モデル無料"
+    },
+    {
+      "name": "WorkBuddy Hy4 Flash free until November 30",
+      "url": "https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/",
+      "deadline": "2026-12-01T00:59:00+09:00",
+      "titleJa": "Tencent WorkBuddy · Hy4 Flash期間限定無料",
+      "group": "AIサービス",
+      "field": "仕事・生活",
+      "offerType": "期間限定無料",
+      "benefit": "WorkBuddyでTencentの新モデルHy4 Flashが11月30日まで無料（TencentのTokenHub APIは同期間50%オフ）",
+      "description": "Tencentの新しい高速・低コストモデルHy4 Flash（1Mコンテキスト、画像理解対応）を、AIエージェントアプリWorkBuddyでクレジット消費なしで使える。",
+      "conditions": "毎日の無料枠あり、使い切るとクレジット消費。画像・動画生成は別モデルで通常課金。北京時間11月30日23:59（日本時間12月1日00:59）まで。",
+      "discount": null,
+      "checkedAt": "2026-11-23",
+      "serviceSummary": "Tencentのデスクトップ向けAIエージェント（オフィス作業の自動化）WorkBuddy。",
+      "serviceUrl": "https://www.workbuddy.ai/",
+      "campaignType": "期間限定モデル無料"
+    },
+    {
+      "name": "Kimi Black Friday new-user first-month bargain",
+      "url": "https://www.kimi.com/campaign/black-friday/rules",
+      "deadline": null,
+      "titleJa": "Kimi · ブラックフライデー初月値引き交渉",
+      "group": "AIサービス",
+      "field": "総合AI",
+      "offerType": "初月",
+      "benefit": "キャンペーンページのAI「Kimmmmy」と値引き交渉すると、Moderato月額プランの初月が割引価格に",
+      "description": "Moonshot AIのKimiがブラックフライデー企画として、未加入ユーザー向けにAIとの対話で初月割引カードを発行するキャンペーンを実施中。",
+      "conditions": "Kimi未加入者のみ、Moderato月額のみ。割引額は対話次第で非公開。2か月目から通常$19/月で自動更新。中国本土は対象外。終了日未定（終了前に告知）。",
+      "discount": null,
+      "checkedAt": "2026-11-23",
+      "serviceSummary": "Moonshot AIのAIアシスタント。Kimiモデルでのチャット、エージェント、Deep Research、Kimi Codeなどを提供。",
+      "serviceUrl": "https://www.kimi.com/",
+      "campaignType": "ブラックフライデー"
+    },
+    {
+      "name": "Topaz Studio first year $299 Black Friday",
+      "url": "https://www.topazlabs.com/pricing",
+      "deadline": null,
+      "titleJa": "Topaz Studio · 年額初年度$299",
+      "group": "AIサービス",
+      "field": "画像・動画",
+      "offerType": "年額割引",
+      "benefit": "全アプリ入りのTopaz Studio年額が初年度$299（通常$499、約40%オフ）",
+      "description": "AIによる写真・動画の高画質化（アップスケール、ノイズ除去、補間）ツール一式の年額プランがブラックフライデー価格。",
+      "conditions": "年額一括・初年度のみ、2年目以降は通常価格。終了日は公式ページに記載なし。",
+      "discount": 40,
+      "checkedAt": "2026-11-23",
+      "serviceSummary": "Topaz Labsの写真・動画向けAI高画質化ツール（Topaz Video / Photo / Gigapixelなど）。",
+      "serviceUrl": "https://www.topazlabs.com/",
+      "campaignType": "ブラックフライデー"
     }
   ],
-  "checked_at": "2026-11-21T23:16:59+00:00"
+  "checked_at": "2026-11-22T23:16:15+00:00"
 }
