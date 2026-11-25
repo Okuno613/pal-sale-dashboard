@@ -75,7 +75,7 @@
     "url": "https://elevenlabs.io/ja/black-friday-promo",
     "feedName": "ElevenLabs Creator first year $99",
     "monogram": "II",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-25"
   },
   {
     "id": "1password",
@@ -1774,5 +1774,63 @@
     "monogram": "Ce",
     "checkedAt": "2026-11-19",
     "preciseDeadline": true
+  },
+  {
+    "id": "suno",
+    "serviceSummary": "テキストから歌詞・ボーカル付きの楽曲を生成する音楽AI。",
+    "serviceUrl": "https://suno.com/",
+    "campaignType": "ブラックフライデー",
+    "name": "Suno",
+    "group": "AIサービス",
+    "field": "音声",
+    "offerType": "年額",
+    "benefit": "30% OFF",
+    "description": "年額プランが30%オフ。Pro $67.20/年、Premier $201.60/年。",
+    "conditions": "初年度の年額特典。終了は12/1頃（公式カウントダウンに基づく目安、時刻は未確認）。更新料金は出典をご確認ください。",
+    "discount": 30,
+    "deadline": "2026-12-01",
+    "url": "https://suno.com/pricing",
+    "feedName": "Suno annual plans 30% off Black Friday",
+    "monogram": "S",
+    "checkedAt": "2026-11-25"
+  },
+  {
+    "id": "invideo",
+    "serviceSummary": "テキストから動画の生成・編集ができるAI動画ツール。",
+    "serviceUrl": "https://invideo.io/",
+    "campaignType": "ブラックフライデー",
+    "name": "invideo",
+    "group": "AIサービス",
+    "field": "画像・動画",
+    "offerType": "年額",
+    "benefit": "最大75% OFF",
+    "description": "Plusが60%オフ（$24/月）、Maxが75%オフ（$62.50/月）。",
+    "conditions": "表示価格は年払いの月換算の可能性があります。終了日は未確認。出典をご確認ください。",
+    "discount": 75,
+    "deadline": null,
+    "url": "https://invideo.io/pricing/",
+    "feedName": "invideo Plus 60% off Max 75% off",
+    "monogram": "iV",
+    "checkedAt": "2026-11-25",
+    "maxDiscount": true
+  },
+  {
+    "id": "grammarly",
+    "serviceSummary": "英文の文法チェックと文章生成を支援するAIライティングツール。",
+    "serviceUrl": "https://www.grammarly.com/",
+    "campaignType": "ブラックフライデー",
+    "name": "Grammarly Pro",
+    "group": "AIサービス",
+    "field": "仕事・生活",
+    "offerType": "年額",
+    "benefit": "50% OFF",
+    "description": "Proプランが50%オフ。",
+    "conditions": "対象条件・終了日は未確認。出典をご確認ください。",
+    "discount": 50,
+    "deadline": null,
+    "url": "https://www.grammarly.com/black-friday",
+    "feedName": "Grammarly Pro 50% off Black Friday",
+    "monogram": "G",
+    "checkedAt": "2026-11-25"
   }
 ]
