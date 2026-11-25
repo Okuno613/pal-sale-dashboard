@@ -1,10 +1,10 @@
 # PAL セールノート
 
-Japanese read-only sale dashboard: filters for 系統, 分野, offer type, discount and deadlines; four sorts; on-device bookmarks and shareable filter URLs. No purchase, signup, account or payment submission paths.
+日本語の閲覧専用セールダッシュボードです。系統・分野・特典の種類・割引率・期限で絞り込め、並び替えは4種類。ブックマークは端末内に保存され、絞り込み条件はURLで共有できます。購入・登録・アカウント・支払いの導線はありません。
 
-## Run
+## 実行方法
 
-Python 3.10+ builds the static site without packages. Node.js 20+ is only needed for checks/tests.
+ビルドには Python 3.10 以上が必要です（追加パッケージ不要）。Node.js 20 以上はチェックとテストの実行にだけ使います。
 
 ```sh
 npm run build
@@ -14,37 +14,35 @@ npm run check
 npm test
 ```
 
-## Independent hosting and feed
+## 独立ホスティングとフィード
 
-GitHub Pages serves `dist/` independently of any running development session. The Pages workflow checks the code, builds and deploys on each push to `main`. PRs run checks without deploying. This repository and the deployed catalogue are public. Only public deal information belongs here; never include personal notes, profiles or preferences.
+GitHub Pages が `dist/` を配信し、開発セッションが動いていなくても閲覧できます。Pages のワークフローは `main` へのプッシュのたびにチェック・ビルド・デプロイを行い、PR ではデプロイせずにチェックだけを実行します。このリポジトリと公開カタログは公開情報です。載せてよいのは公開されているセール情報だけです。個人的なメモ・プロフィール・好みは絶対に含めないでください。
 
-The sale watch runs once daily at **08:13 JST**. After research succeeds and its source `seen.json` is saved:
+セールウォッチは毎日 **08:13 JST** に1回実行されます。調査が成功し、ソース側の `seen.json` が保存されたら:
 
-1. Clone this repo or update its clean `main` checkout (`git pull --ff-only`).
-2. Run `python3 publish_feed.py --source /path/to/public-seen.json`, substituting the successful watch's source file. Keep that private source outside this repository.
-3. Review `git diff -- data/seen.json`: **public deal details only**, no personal data, credentials, referral/personalized URLs or account details. The allowlist removes unknown keys but cannot determine whether free text is private; the watcher must check it.
-4. Run `npm test && npm run build`, then `git add data/seen.json && git commit -m "Refresh public sale feed" && git push origin main`. Commit only the feed, never the private source. If the push is rejected because `main` advanced, pull with `--ff-only` before preparing the commit; never force-push.
+1. この repo を clone するか、クリーンな `main` チェックアウトを更新します（`git pull --ff-only`）。
+2. `python3 publish_feed.py --source /path/to/public-seen.json` を実行します。パスの部分には、成功したウォッチのソースファイルを指定してください。この非公開ソースは repo の外に置いてください。
+3. `git diff -- data/seen.json` を確認します。**公開できるセール詳細だけ**が対象で、個人データ・認証情報・紹介用や個人化されたURL・アカウント詳細は含めません。許可リスト方式で未知のキーは除去されますが、フリーテキストが私的な内容かどうかまでは判定できません。ウォッチ側で必ず確認してください。
+4. `npm test && npm run build` を実行し、`git add data/seen.json && git commit -m "Refresh public sale feed" && git push origin main` します。コミットするのはフィードだけです。非公開ソースは絶対にコミットしないでください。`main` が進んでいてプッシュが拒否されたら、`--ff-only` で pull してからコミットを準備し直します。force push は禁止です。
 
-This tiny data-only commit is the only ongoing publishing task. The workflow rebuilds Pages automatically; do not wake a managing session, open recurring data PRs, run a second crawler or add a new automation. `checked_at` records each successful watch, including no-new-deal runs. Never publish a timestamp for a failed watch.
+この小さなデータ専用コミットが、継続的な公開作業のすべてです。ワークフローが Pages を自動で再構築します。管理セッションを起こしたり、定期的なデータPRを開いたり、2つ目のクローラーを回したり、新しい自動化を足したりしないでください。`checked_at` は、新しいセールが無かった回も含め、成功したウォッチごとに記録します。失敗したウォッチのタイムスタンプは公開しません。
 
-The dashboard fetches the generated JSON once a minute, on tab return and manually. A warning appears when the last successful watch is over 30 hours old, allowing the daily run time to finish; failed reloads retain the current view. A browser can't bypass Pages CDN propagation: allow the GitHub Actions deployment and its cache to settle, usually a few minutes.
+ダッシュボードは生成済みJSONを1分ごと、タブに戻ったとき、そして手動で再取得します。最後に成功したウォッチから30時間を超えると警告が表示されます（毎日の実行が終わるまでの猶予を含みます）。再取得に失敗した場合は現在の表示を保持します。ブラウザ側では Pages の CDN 伝播を早めることはできません。GitHub Actions のデプロイとキャッシュが落ち着くまで、通常は数分かかります。
 
-## Source schema and semantics
+## ソースのスキーマと意味づけ
 
-`data/catalog.json` contains curated Japanese metadata from public sale research. These inherited claims are not independently re-verified by this app. Prices, eligibility and regional availability must be checked at the source. No login, purchase or signup was performed to build this app. Only offers that a person in Japan can sign up for and use are eligible for the feed; when Japan availability cannot be confirmed, leave the offer out.
+`data/catalog.json` には、公開セール調査に基づく日本語のキュレーション済みメタデータが入っています。ここに書かれた内容は、このアプリが独自に再検証したものではありません。価格・利用資格・地域ごとの提供可否は、必ず出典で確認してください。このアプリの作成にあたって、ログイン・購入・登録は一切行っていません。
 
-`data/seen.json` uses `{ "checked_at": "ISO timestamp", "seen": [{ "name": "Public deal name", "url": "https://...", "deadline": "2026-11-30" }] }`. `publish_feed.py` allowlists these keys and optional `titleJa`, `group`, `field`, `offerType`, `benefit`, `description`, `conditions`, `discount` (0–100), `starts`, `checkedAt`, `serviceSummary`, `serviceUrl`, `campaignType`. Unknown fields are dropped. Do not put private text into allowed fields.
+`data/seen.json` の形式は `{ "checked_at": "ISO timestamp", "seen": [{ "name": "Public deal name", "url": "https://...", "deadline": "2026-11-30" }] }` です。`publish_feed.py` はこれらのキーと、任意の `titleJa`、`group`、`field`、`offerType`、`benefit`、`description`、`conditions`、`discount`（0〜100）、`starts`、`checkedAt`、`serviceSummary`、`serviceUrl`、`campaignType` だけを通します。未知のフィールドは破棄されます。許可されたフィールドにも私的なテキストを入れないでください。
 
-Cards separate a short official service overview (`serviceSummary`, with its public `serviceUrl`) from the offer description and campaign type (`campaignType`). Examples include Black Friday, student discounts, new-user/returning-user offers, model launches, purchase bundles and event or conversation-based perks. Include the latter only when public official eligibility and terms are available; never infer a promotion from an unverified mention. Missing overview/type metadata stays explicitly unconfirmed. Model names illustrate supported families, not an independent quality ranking; check the linked official service page for the latest lineup and limits.
+カードでは、サービスの短い公式概要（`serviceSummary` と、その公開URL `serviceUrl`）と、特典の説明・施策の種類（`campaignType`）を分けて表示します。施策の種類の例: ブラックフライデー、学割、新規・復帰ユーザー特典、モデル公開、購入特典、イベントや会話による特典など。後者は、公式の利用資格と条件が公開されている場合だけ含め、未確認の言及から特典を推測しないでください。概要や種類のメタデータが無い場合は、未確認であることを明示したままにします。モデル名は対応ファミリーの例示であり、品質の順位づけではありません。最新のラインナップと制限は、リンク先の公式サービスページで確認してください。
 
-### Bounded discovery
+### 発見の範囲
 
-Use search/X and roundups such as [Resource.fyi](https://resource.fyi/black-friday-deals), [AI Credits](https://aicredits.tech/blog/black-friday-ai-deals-2026) and [AI free-quota listings](https://mozhenzhen.com/wool) to gather candidates in bulk, then deduplicate by provider and offer before checking a bounded selection on official pages. A roundup's advertised count is a candidate count, not a verified or unique sale count. Do not copy unconfirmed coupon codes, deadlines, eligibility or cash-equivalent estimates into the catalogue. Keep research scratch files outside this public repository.
+候補をまとめて集めるには検索やX、そして [Resource.fyi](https://resource.fyi/black-friday-deals)、[AI Credits](https://aicredits.tech/blog/black-friday-ai-deals-2026)、[AI free-quota listings](https://mozhenzhen.com/wool) のようなまとめを使い、提供元と特典ごとに重複を除いてから、公式ページで対象を絞って確認します。まとめサイトが掲げる件数は候補の数であって、検証済みや重複なしのセール件数ではありません。未確認のクーポンコード・期限・利用資格・現金換算の見積もりをカタログに転記しないでください。調査用の作業ファイルは、この公開 repo の外に置いてください。
 
-Candidate trackers, their update cadence and Japan-availability caveats are listed in [SOURCES.md](SOURCES.md).
+[GitHub Student Developer Pack](https://education.github.com/pack) のような公式パートナープログラムは、その特典についての一次情報源になり得ます。学生認証・アカウント制限・利用上限・初期クレジットと継続クレジットの区別・有料更新の条件は、そのまま保持してください。常設の無料枠はブラックフライデーではなく `無料枠` と表示し、条件付きのクリエイター還元は確実な値引きではなく参加特典として扱います。同じ提供元の別々の特典は分けて扱い、1つのキャンペーンの条件を全プランに当てはめないでください。カウントダウンや非公式の日付しか分からない場合は、正確な期限は不明のままにします。
 
-Official partner programmes such as the [GitHub Student Developer Pack](https://education.github.com/pack) can be the primary source for their own offers. Preserve student verification, account restrictions, usage caps, initial versus recurring credits, and paid renewal terms. Label evergreen free tiers as `無料枠`, not Black Friday; label contingent creator refunds as participation benefits, not guaranteed price cuts. Separate different offers from the same provider rather than treating one campaign's terms as applying to every plan. Leave exact deadlines unknown when only a countdown or an unofficial date is available.
+新しいセールは、任意の公開メタデータが付くまで「新着・未整理」として未分類の絞り込みに現れます。ただし掲載の原則として、Pages に出す項目は内容と裏取りが済んだ状態にします（2026-11-25 決定）。割引率と期限が不明なものは不明のままにします。ボーナスクレジットやポイントを、割引率へ黙って換算しないでください。日付だけの期限は JST のその日の終わりを意味し、時刻は未確認と表示します。正確なタイムスタンプには UTC オフセットを含めます。キュレーション済みの正確な期限は、フィードの日付だけの値より優先されます（Qwen は JST では日をまたぎます）。フィード側に正確なタイムスタンプがある場合は、それで更新できます。キュレーション済みの特典は、最新のフィードに無くてもアーカイブに残ります。終了したセールは既定の表示から自動的に外れます。
 
-New deals appear as 新着・未整理 with 未分類 filters until optional public metadata is provided. Unknown discounts/deadlines stay unknown. Bonus credits and points aren't silently converted into discounts. Date-only deadlines mean end of day JST and are labelled as time-unconfirmed. Exact timestamps include their UTC offset. Curated precise deadlines override lossy date-only feed values (Qwen crosses midnight in JST); explicit timestamps in the feed can update them. Curated offers stay in the archive even if absent from the latest feed; expired deals automatically leave the default view.
-
-There are no runtime dependencies, backend, remote fonts, analytics or service worker. Bookmarks remain in browser-local storage. All displayed source text uses textContent; source links allow HTTP(S) only. Relative asset and data URLs support both a project Pages path and a root domain.
+ランタイムの依存関係・バックエンド・リモートフォント・アナリティクス・サービスワーカーはありません。ブックマークはブラウザのローカルストレージに残ります。表示される出典テキストはすべて textContent 経由で描画され、出典リンクは HTTP(S) のみ許可されます。相対アセットとデータのURLは、プロジェクトの Pages パスとルートドメインの両方に対応します。
