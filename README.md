@@ -31,7 +31,7 @@ The dashboard fetches the generated JSON once a minute, on tab return and manual
 
 ## Source schema and semantics
 
-`data/catalog.json` contains curated Japanese metadata from public sale research. These inherited claims are not independently re-verified by this app. Prices, eligibility and regional availability must be checked at the source. No login, purchase or signup was performed to build this app.
+`data/catalog.json` contains curated Japanese metadata from public sale research. These inherited claims are not independently re-verified by this app. Prices, eligibility and regional availability must be checked at the source. No login, purchase or signup was performed to build this app. Only offers that a person in Japan can sign up for and use are eligible for the feed; when Japan availability cannot be confirmed, leave the offer out.
 
 `data/seen.json` uses `{ "checked_at": "ISO timestamp", "seen": [{ "name": "Public deal name", "url": "https://...", "deadline": "2026-11-30" }] }`. `publish_feed.py` allowlists these keys and optional `titleJa`, `group`, `field`, `offerType`, `benefit`, `description`, `conditions`, `discount` (0–100), `starts`, `checkedAt`, `serviceSummary`, `serviceUrl`, `campaignType`. Unknown fields are dropped. Do not put private text into allowed fields.
 
@@ -40,6 +40,8 @@ Cards separate a short official service overview (`serviceSummary`, with its pub
 ### Bounded discovery
 
 Use search/X and roundups such as [Resource.fyi](https://resource.fyi/black-friday-deals), [AI Credits](https://aicredits.tech/blog/black-friday-ai-deals-2026) and [AI free-quota listings](https://mozhenzhen.com/wool) to gather candidates in bulk, then deduplicate by provider and offer before checking a bounded selection on official pages. A roundup's advertised count is a candidate count, not a verified or unique sale count. Do not copy unconfirmed coupon codes, deadlines, eligibility or cash-equivalent estimates into the catalogue. Keep research scratch files outside this public repository.
+
+Candidate trackers, their update cadence and Japan-availability caveats are listed in [SOURCES.md](SOURCES.md).
 
 Official partner programmes such as the [GitHub Student Developer Pack](https://education.github.com/pack) can be the primary source for their own offers. Preserve student verification, account restrictions, usage caps, initial versus recurring credits, and paid renewal terms. Label evergreen free tiers as `無料枠`, not Black Friday; label contingent creator refunds as participation benefits, not guaranteed price cuts. Separate different offers from the same provider rather than treating one campaign's terms as applying to every plan. Leave exact deadlines unknown when only a countdown or an unofficial date is available.
 
