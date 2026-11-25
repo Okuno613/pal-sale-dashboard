@@ -569,7 +569,24 @@
       "serviceSummary": "Topaz Labsの写真・動画向けAI高画質化ツール（Topaz Video / Photo / Gigapixelなど）。",
       "serviceUrl": "https://www.topazlabs.com/",
       "campaignType": "ブラックフライデー"
+    },
+    {
+      "name": "Regolo.ai 30-day free trial",
+      "url": "https://regolo.ai/pricing/",
+      "deadline": null,
+      "titleJa": "Regolo.ai · 30日無料トライアル",
+      "group": "AIサービス",
+      "field": "開発・API",
+      "offerType": "無料トライアル",
+      "benefit": "30日間、1日100万トークン枠（モデル倍率制）",
+      "description": "登録から30日間、クレジットカードなしで全Coreモデルを利用できる。OpenAI互換API。DeepSeek-V4.1-Flashは×3、GLM-5.2は×5の倍率がかかるため、実質は約33万/約20万トークン/日。",
+      "conditions": "登録から30日間。枠はモデル倍率制で、1M/日をそのまま使えるわけではない。レート制限は通常より厳しい。終了後は自動課金なしでPAYGへ移行し、APIキーは残る。EUホスト・Zero Data Retention。",
+      "discount": null,
+      "checkedAt": "2026-11-25",
+      "serviceSummary": "EUホストのOpenAI互換API。Zero Data Retentionを公式に記載し、DeepSeek・GLM・Qwen・Gemma・gpt-ossなどを提供。",
+      "serviceUrl": "https://regolo.ai/pricing/",
+      "campaignType": "無料トライアル"
     }
   ],
-  "checked_at": "2026-11-22T23:16:15+00:00"
+  "checked_at": "2026-11-25T03:06:52+00:00"
 }
