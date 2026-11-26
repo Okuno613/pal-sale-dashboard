@@ -702,7 +702,7 @@
       "offerType": "API割引",
       "benefit": "Carbon / Argon が50% OFF",
       "description": "Standard 入力 $2.00 / 出力 $10.00 per 1M tokens。2026-12-01から $4.00 / $20.00。",
-      "conditions": "日本利用可。18歳以上・Paid tier・有効なCloudプロジェクト。Carbon/ArgonはFree tier不可。前払いクレジットは購入から12か月。自動リロードは任意。Paidは入力・出力を製品改善に使用しない。",
+      "conditions": "日本利用可。18歳以上・Paid tier・有効なCloudプロジェクト。Carbon/ArgonはFree tier不可。前払いクレジットは12か月で失効し、原則返金不可。自動リロードは任意。Paidは入力・出力を製品改善に使用しない。",
       "discount": 50,
       "checkedAt": "2026-11-27",
       "serviceSummary": "Googleの開発者向けAPI。OpenAI互換エンドポイント、関数呼び出し、構造化出力に対応。",
@@ -719,7 +719,7 @@
       "offerType": "API割引",
       "benefit": "3.8 Flash が50% OFF",
       "description": "Standard 入力 $0.75 / 出力 $3.75 per 1M tokens。2027-01-01から $1.50 / $7.50。",
-      "conditions": "日本利用可。18歳以上・Paid tier・有効なCloudプロジェクト。Free tierもあり、無料枠のデータは製品改善と人間レビューに使用。Paidは製品改善に使用しない。前払いクレジットは購入から12か月。自動リロードは任意。",
+      "conditions": "日本利用可。18歳以上・Paid tier・有効なCloudプロジェクト。Free tierもあり、無料枠のデータは製品改善と人間レビューに使用。Paidは製品改善に使用しない。前払いクレジットは12か月で失効し、原則返金不可。自動リロードは任意。",
       "discount": 50,
       "checkedAt": "2026-11-27",
       "serviceSummary": "Googleの開発者向けAPI。OpenAI互換エンドポイント、関数呼び出し、構造化出力に対応。",
@@ -744,5 +744,5 @@
       "campaignType": "常設無料枠"
     }
   ],
-  "checked_at": "2026-11-26T18:01:10+00:00"
+  "checked_at": "2026-11-26T18:02:37+00:00"
 }
