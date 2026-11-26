@@ -1928,5 +1928,43 @@
     "feedName": "RackNerd 性价比 VPS 服务器「黑五特价」促销中！终身续费同价",
     "monogram": "Rn",
     "checkedAt": "2026-11-25"
+  },
+  {
+    "id": "appsumo-dm-champ",
+    "serviceSummary": "WhatsApp・Instagram・iMessageなどのDMで24時間対応するAI営業エージェント。",
+    "serviceUrl": "https://appsumo.com/products/dm-champ/",
+    "campaignType": "ブラックフライデー",
+    "name": "DM Champ",
+    "group": "AIサービス",
+    "field": "仕事・生活",
+    "offerType": "買い切り",
+    "benefit": "$58.65（通常 $69）",
+    "description": "AI営業エージェントの生涯ライセンスが$58.65。WhatsApp・Instagram・iMessageなどのDMで24時間対応。",
+    "conditions": "AppSumoでの販売。15%オフは11/26までと表示。ブラックフライデーセール自体は12/2頃まで継続の見込み。価格は出典をご確認ください。",
+    "discount": 15,
+    "deadline": "2026-11-26",
+    "url": "https://appsumo.com/products/dm-champ/",
+    "feedName": "DM Champ lifetime 15% off",
+    "monogram": "DM",
+    "checkedAt": "2026-11-26"
+  },
+  {
+    "id": "appsumo-visby",
+    "serviceSummary": "AI検索でのブランド言及を追跡し、競合とのシェアやSEO・GEOの改善点を分析するツール。",
+    "serviceUrl": "https://appsumo.com/products/visby/",
+    "campaignType": "ブラックフライデー",
+    "name": "Visby",
+    "group": "AIサービス",
+    "field": "仕事・生活",
+    "offerType": "買い切り",
+    "benefit": "$71.10（通常 $79）",
+    "description": "GEO・AI検索最適化ツールの生涯ライセンスが$71.10。AIブランド言及の追跡、競合ベンチマーク、コンテンツ改善に対応。",
+    "conditions": "AppSumoでの販売。11/25は15%オフ（$67.15）だったが、11/26に10%オフ（$71.10）へ戻った。ブラックフライデーセールは12/2頃まで継続の見込み。価格は出典をご確認ください。",
+    "discount": 10,
+    "deadline": null,
+    "url": "https://appsumo.com/products/visby/",
+    "feedName": "Visby lifetime 10% off",
+    "monogram": "Vi",
+    "checkedAt": "2026-11-26"
   }
 ]
