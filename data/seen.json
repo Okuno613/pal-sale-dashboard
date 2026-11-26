@@ -627,7 +627,71 @@
     {
       "name": "RackNerd 性价比 VPS 服务器「黑五特价」促销中！终身续费同价",
       "url": "https://www.iplaysoft.com/p/racknerd"
+    },
+    {
+      "name": "Devin for Startups Japan $15k credits + 1:1 match",
+      "url": "https://devin.ai/ja/startups",
+      "deadline": null,
+      "titleJa": "Devin for Startups Japan",
+      "group": "AIサービス",
+      "field": "開発エージェント",
+      "offerType": "無料クレジット",
+      "benefit": "$15,000＋最大$50,000マッチ",
+      "description": "日本国内・創業5年以内のスタートアップ向け。承認後$15,000相当クレジットと追加購入1:1マッチ最大$50,000。",
+      "conditions": "審査制・随時受付。シート数上限なし。カード・電話番号要否は公式未記載。Teamsの設定で学習利用を停止可能。",
+      "checkedAt": "2026-11-26",
+      "serviceSummary": "自律型AIソフトウェアエンジニア。PR作成、バグ修正、リファクタリングなどを代行。",
+      "serviceUrl": "https://devin.ai/ja",
+      "campaignType": "スタートアップ特典"
+    },
+    {
+      "name": "Devin SWE-2.1 free for self-serve plans",
+      "url": "https://docs.devin.ai/desktop/chat/models",
+      "deadline": "2026-12-09",
+      "titleJa": "Devin SWE-2.1",
+      "group": "AIサービス",
+      "field": "開発エージェント",
+      "offerType": "無料体験",
+      "benefit": "Desktop／CLIで無料",
+      "description": "SWE-2.1をDevin Desktop／CLIのself-serveプランで期間限定無料提供。CloudセッションとUltrafastは対象外。",
+      "conditions": "2026-12-08 PTまで（JSTでは12/9、時刻未確認）。12/9〜2027/1/30 PTは入力$0.50・出力$2.50・キャッシュ読取$0.05（各100万トークン）、以後$2・$10・$0.20。通常クォータ消費有無は未確認。",
+      "checkedAt": "2026-11-26",
+      "serviceSummary": "Cognitionの開発エージェント。SWE-2.1はソフトウェア開発向けの自社モデル。",
+      "serviceUrl": "https://devin.ai/ja",
+      "campaignType": "期間限定・モデル無料"
+    },
+    {
+      "name": "PixAI Black Friday credit packs 100%+ bonus",
+      "url": "https://prtimes.jp/main/html/rd/p/000000118.000173726.html",
+      "deadline": "2026-12-02T12:00:00+09:00",
+      "titleJa": "PixAI",
+      "group": "AIサービス",
+      "field": "画像・動画",
+      "offerType": "クレジット",
+      "benefit": "パック100%以上増量＋毎日1枚無料",
+      "description": "クレジットパックのボーナスが100%以上に増量。毎日チェックインでTsubaki.3生成カードを1枚無料配布。",
+      "conditions": "11/25 12:00〜12/2 12:00 JST。購入回数制限なし。通常会員ボーナスとの併用不可。18歳以上。カード・PayPay・GMO決済。無料カードの有効期限は未確認。",
+      "checkedAt": "2026-11-26",
+      "serviceSummary": "アニメ調の画像・漫画・動画生成AI。Tsubaki.3と対話型エージェントMio.2を提供。",
+      "serviceUrl": "https://pixai.art/ja",
+      "campaignType": "ブラックフライデー"
+    },
+    {
+      "name": "Xiaomi 18 Pro Series Google AI Pro 3 months",
+      "url": "https://www.mi.com/jp/benefits/",
+      "deadline": "2027-06-12",
+      "titleJa": "Google AI Pro × Xiaomi 18 Pro",
+      "group": "AIサービス",
+      "field": "総合AI",
+      "offerType": "端末特典",
+      "benefit": "3ヶ月無料＋5TB",
+      "description": "日本版Xiaomi 18 Pro／Pro Maxの購入・アクティベート後、Google AI Proを3ヶ月無料。5TBストレージ付き。",
+      "conditions": "対象購入期間は2026/11/17〜2027/1/3。購入・アクティベート後2027/6/12までに申込。日本公式チャネル・日本アクティベート対象。既存ユーザー可否・終了後料金は利用規約で確認。",
+      "checkedAt": "2026-11-26",
+      "serviceSummary": "Gemini、Google Flow、AntigravityなどのAI機能と5TBストレージをまとめたサブスクリプション。",
+      "serviceUrl": "https://one.google.com/intl/ja_jp/about/google-ai-plans/",
+      "campaignType": "端末購入特典"
     }
   ],
-  "checked_at": "2026-11-25T03:16:02+00:00"
+  "checked_at": "2026-11-26T02:24:28+00:00"
 }
