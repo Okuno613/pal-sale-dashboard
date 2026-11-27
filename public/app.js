@@ -13,7 +13,11 @@ for (const key of ['minDiscount', 'deadline', 'status']) {
 form.elements.onlySaved.checked = params.get('saved') === '1';
 $('#search').value = params.get('q') || '';
 if ([...$('#sort').options].some(o => o.value === params.get('sort'))) $('#sort').value = params.get('sort');
-if (matchMedia('(max-width: 760px)').matches) $('#filter-panel').open = false;
+function toggleFilters(open) {
+  document.body.classList.toggle('filters-open', open);
+  $('#filter-backdrop').hidden = !open;
+  $('#open-filters').setAttribute('aria-expanded', String(open));
+}
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -82,18 +86,26 @@ function showDetail(deal) {
 }
 function card(deal) {
   const status = statusOf(deal), article = element('article', `card ${status}`), top = element('div', 'card-top');
-  top.append(element('span', 'service-icon', deal.monogram || deal.name.slice(0, 2)));
-  if (status !== 'active' || deal.fresh) top.append(element('span', `status-label ${status}`, status === 'upcoming' ? '開催予定' : status === 'ended' ? '終了' : '新着・未整理'));
-  top.append(saveButton(deal));
-  article.append(top, element('p', 'category', `${deal.field} / ${deal.offerType}`), element('h3', '', deal.name));
-  const days = daysLeft(deal), deadline = element('time', `deadline ${days === null ? 'unknown' : days >= 0 && days <= 3 ? 'urgent' : ''}`, deadlineLabel(deal));
+  const title = element('div', 'card-title');
+  title.append(element('h3', '', deal.name), element('p', 'category', `${deal.field} · ${deal.offerType}`));
+  top.append(element('span', 'service-icon', deal.monogram || deal.name.slice(0, 2)), title, saveButton(deal));
+  const tags = element('div', 'tags');
+  if (status === 'upcoming') tags.append(element('span', 'tag upcoming', '開催予定'));
+  if (status === 'ended') tags.append(element('span', 'tag', '終了'));
+  if (deal.fresh && status !== 'ended') tags.append(element('span', 'tag fresh', 'NEW'));
+  tags.append(element('span', 'tag', deal.campaignType || '施策未確認'));
+  const benefitRow = element('div', 'benefit-row');
+  benefitRow.append(element('div', 'benefit', deal.benefit));
+  if (deal.discount != null && deal.discount > 0) benefitRow.append(element('span', 'off', `-${deal.discount}%`));
+  article.append(top, tags, benefitRow, element('p', 'description', deal.description));
+  const days = daysLeft(deal), deadline = element('time', `deadline ${days === null ? 'unknown' : days >= 0 && days <= 3 && status !== 'ended' ? 'urgent' : ''}`, deadlineLabel(deal));
   if (deal.deadline) deadline.dateTime = deal.deadline;
-  article.append(deadline, element('p', 'service-summary', deal.serviceSummary || 'サービス概要は公式情報を確認中です。'));
-  article.append(element('span', 'campaign-label', deal.campaignType || '施策未確認'), element('div', 'benefit', deal.benefit), element('p', 'description', deal.description), element('p', 'condition', deal.shortCondition || deal.conditions));
   const bottom = element('div', 'card-bottom');
-  bottom.append(element('span', 'card-source-note', '特典の詳細・出典'));
-  const button = element('button', 'detail-link', '条件を見る ↗'); button.type = 'button'; button.addEventListener('click', () => showDetail(deal));
-  bottom.append(button); article.append(bottom); return article;
+  const button = element('button', 'detail-link', '詳細・条件 →'); button.type = 'button';
+  bottom.append(deadline, button); article.append(bottom);
+  // The whole card opens the details; the star keeps its own action.
+  article.addEventListener('click', e => { if (!e.target.closest('.save')) showDetail(deal); });
+  return article;
 }
 function render() {
   const state = filters(), filtered = sortDeals(filterDeals(deals, state), $('#sort').value);
@@ -112,7 +124,11 @@ function render() {
     const chip = element('button', 'filter-chip', `${labels[key]}: ${input.selectedOptions[0].textContent} ×`);
     chip.type = 'button'; chip.addEventListener('click', () => { input.value = key === 'status' ? 'live' : ''; render(); }); chips.push(chip);
   }
-  $('#active-filters').replaceChildren(...chips); persistParams();
+  $('#active-filters').replaceChildren(...chips);
+  const count = chips.length + Number(form.elements.onlySaved.checked);
+  $('#filter-count').textContent = count; $('#filter-count').hidden = !count;
+  $('#apply-filters').textContent = `${filtered.length}件を見る`;
+  persistParams();
 }
 function reset() { form.reset(); $('#search').value = ''; $('#sort').value = 'deadline'; render(); }
 function populateOptions(first) {
@@ -125,12 +141,13 @@ function populateOptions(first) {
 }
 function updateFreshness(payload, error = false) {
   const stamp = payload?.checkedAt || payload?.syncedAt;
-  $('#sync-time').textContent = stamp && Number.isFinite(Date.parse(stamp)) ? `${payload.checkedAt ? '巡回' : '同期'}: ${new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(Date.parse(stamp))} JST` : '同期時刻を確認できません';
+  $('#sync-time').textContent = stamp && Number.isFinite(Date.parse(stamp)) ? `${payload.checkedAt ? '更新' : '同期'} ${new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(Date.parse(stamp))}` : '更新時刻不明';
   let warning = '';
   if (error) warning = '再読み込みに失敗しました。表示中のデータを残しています。時間をおいて再度お試しください。';
   else if (!payload.sourceAvailable) warning = '新着フィードを読み込めません。保存済みの調査メモのみ表示しています。';
   else if (stamp && Date.now() - Date.parse(stamp) > 30 * 60 * 60 * 1000) warning = '最終同期から30時間以上経っています。新着がまだ反映されていない可能性があります。';
   $('#feed-warning').textContent = warning; $('#feed-warning').hidden = !warning;
+  document.querySelector('.dot').classList.toggle('stale', Boolean(warning));
 }
 async function load() {
   $('#refresh').disabled = true;
@@ -152,6 +169,10 @@ form.addEventListener('change', render); form.addEventListener('submit', e => e.
 $('#search').addEventListener('input', render); $('#sort').addEventListener('change', render);
 $('#clear-filters').addEventListener('click', reset); $('#empty-reset').addEventListener('click', reset);
 $('#refresh').addEventListener('click', load); $('#close-detail').addEventListener('click', () => $('#detail').close());
+$('#open-filters').addEventListener('click', () => toggleFilters(true));
+$('#filter-backdrop').addEventListener('click', () => toggleFilters(false));
+$('#apply-filters').addEventListener('click', () => toggleFilters(false));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('filters-open')) toggleFilters(false); });
 $('#detail').addEventListener('click', e => { if (e.target === $('#detail')) { const rect = $('#detail').getBoundingClientRect(); if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) $('#detail').close(); } });
 for (const button of document.querySelectorAll('[data-quick]')) button.addEventListener('click', () => {
   form.reset(); $('#search').value = ''; $('#sort').value = 'deadline';
@@ -160,7 +181,10 @@ for (const button of document.querySelectorAll('[data-quick]')) button.addEventL
   if (button.dataset.quick === 'saved') { form.elements.onlySaved.checked = true; form.elements.status.value = 'all'; }
   render(); $('.results').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
-document.addEventListener('visibilitychange', () => { if (!document.hidden) { updateToday(); load(); } });
+// The feed changes about once a day, so poll gently to spare mobile data.
+let lastLoad = 0;
+const maybeLoad = () => { if (Date.now() - lastLoad > 5 * 60000) { lastLoad = Date.now(); load(); } };
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { updateToday(); maybeLoad(); } });
 window.addEventListener('storage', e => { if (e.key === 'pal-saved') { try { const next = JSON.parse(e.newValue || '[]'); if (Array.isArray(next)) { saved = next.filter(v => typeof v === 'string'); render(); } } catch { /* Ignore corrupted storage. */ } } });
-setInterval(() => { updateToday(); if (!document.hidden) load(); }, 60000);
-updateToday(); load();
+setInterval(() => { updateToday(); if (!document.hidden) maybeLoad(); }, 60000);
+updateToday(); lastLoad = Date.now(); load();
