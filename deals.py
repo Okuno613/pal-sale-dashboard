@@ -85,6 +85,8 @@ def upsert(records, feed, checked=None):
             index[record['name']].update(record)
             updated.append(record['name'])
         else:
+            # addedAt marks the day the deal first entered the feed; updates never move it.
+            record.setdefault('addedAt', checked or today().isoformat())
             feed['seen'].append(record)
             index[record['name']] = record
             added.append(record['name'])

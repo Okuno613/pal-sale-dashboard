@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mergeDeals, filterDeals, sortDeals, statusOf, deadlineTime, daysLeft, safeUrl } from '../public/deals.js';
+import { mergeDeals, filterDeals, sortDeals, statusOf, deadlineTime, daysLeft, safeUrl, isNew } from '../public/deals.js';
 const now = Date.parse('2026-11-19T20:00:00+09:00');
 test('date-only deadlines last through the Japanese calendar day', () => {
   const deal = { deadline: '2026-11-19' };
@@ -55,4 +55,20 @@ test('combined filters exclude bonuses, unknown dates and expired offers', () =>
 test('sorts keep unknown discounts last and expired deadlines separate', () => {
   assert.deepEqual(sortDeals(deals, 'discount', now).map(d => d.id), ['ended', 'half', 'next', 'bonus']);
   assert.deepEqual(sortDeals(deals, 'deadline', now).map(d => d.id), ['half', 'next', 'bonus', 'ended']);
+});
+test('new arrivals cover recent additions and freshly opened campaigns', () => {
+  assert.equal(isNew({ addedAt: '2026-11-13' }, now), true);   // 6 days ago
+  assert.equal(isNew({ addedAt: '2026-11-10' }, now), false);  // beyond the week
+  assert.equal(isNew({ addedAt: '2026-11-10', starts: '2026-11-18T00:00:00+09:00' }, now), true);
+  assert.equal(isNew({ addedAt: '2026-11-10', starts: '2026-11-25T00:00:00+09:00' }, now), true); // upcoming
+  assert.equal(isNew({}, now), false);
+});
+test('onlyNew filter and new sort use the addedAt date through merges', () => {
+  const merged = mergeDeals(
+    [{ name: 'Fresh', url: 'https://example.com/f', addedAt: '2026-11-18' }, { name: 'Stale', url: 'https://example.com/s', addedAt: '2026-10-01' }],
+    [{ id: 'cur', name: 'Curated', addedAt: '2026-11-15' }]
+  );
+  assert.equal(merged.find(d => d.name === 'Fresh').addedAt, '2026-11-18');
+  assert.deepEqual(filterDeals(merged, { onlyNew: true }, now).map(d => d.name).sort(), ['Curated', 'Fresh']);
+  assert.deepEqual(sortDeals(merged, 'new', now).map(d => d.name), ['Fresh', 'Curated', 'Stale']);
 });

@@ -25,6 +25,22 @@ export function daysLeft(deal, now = Date.now()) {
   return Math.floor((end + JST_OFFSET) / 86400000) - Math.floor((now + JST_OFFSET) / 86400000);
 }
 
+export const NEW_WINDOW_DAYS = 7;
+
+export function isNew(deal, now = Date.now(), days = NEW_WINDOW_DAYS) {
+  // Newly added to the board, or a campaign that (re)opened within the window.
+  const day = v => { const t = v ? Date.parse(/^\d{4}-\d{2}-\d{2}$/.test(v) ? `${v}T12:00:00+09:00` : v) : NaN; return Number.isFinite(t) ? t : null; };
+  const added = day(deal.addedAt);
+  if (added !== null && added <= now && now - added <= days * 86400000) return true;
+  const start = day(deal.starts);
+  if (start === null) return false;
+  return start > now || now - start <= days * 86400000;
+}
+
+export function newTime(deal) {
+  return Math.max(Date.parse(deal.addedAt || '') || 0, Date.parse(deal.starts || '') || 0, Date.parse(deal.checkedAt || '') || 0);
+}
+
 export function mergeDeals(feed, catalog) {
   const result = catalog.map(d => ({ ...d }));
   for (const raw of feed) {
@@ -33,7 +49,7 @@ export function mergeDeals(feed, catalog) {
     if (existing) {
       // Curated records may have a more precise timestamp or split offers at one URL.
       if (Object.hasOwn(raw, 'deadline') && (!existing.preciseDeadline || raw.deadline?.includes('T'))) existing.deadline = raw.deadline;
-      for (const key of ['group', 'field', 'offerType', 'benefit', 'description', 'conditions', 'starts', 'checkedAt', 'serviceSummary', 'serviceUrl', 'campaignType']) {
+      for (const key of ['group', 'field', 'offerType', 'benefit', 'description', 'conditions', 'starts', 'checkedAt', 'addedAt', 'serviceSummary', 'serviceUrl', 'campaignType']) {
         if (typeof raw[key] === 'string') existing[key] = raw[key];
       }
       if (typeof raw.titleJa === 'string') existing.name = raw.titleJa;
@@ -50,7 +66,7 @@ export function mergeDeals(feed, catalog) {
       deadline: raw.deadline || null, starts: raw.starts || null,
       conditions: raw.conditions || '詳細な条件・割引率は出典をご確認ください。',
       serviceSummary: raw.serviceSummary || '', serviceUrl: raw.serviceUrl || null, campaignType: raw.campaignType || '未確認',
-      url: raw.url, checkedAt: raw.checkedAt || null, fresh: true });
+      url: raw.url, checkedAt: raw.checkedAt || null, addedAt: raw.addedAt || null, fresh: true });
   }
   return result.map(d => ({ ...d, url: safeUrl(d.url), serviceUrl: safeUrl(d.serviceUrl) }));
 }
@@ -73,6 +89,7 @@ export function filterDeals(deals, filters, now = Date.now()) {
       if (days === null || status === 'ended' || days > Number(filters.deadline)) return false;
     }
     if (filters.onlySaved && !filters.saved?.includes(d.id)) return false;
+    if (filters.onlyNew && !isNew(d, now)) return false;
     return !query || [d.name, d.description, d.benefit, d.conditions, d.field, d.serviceSummary, d.campaignType].join(' ').toLocaleLowerCase('ja').includes(query);
   });
 }
@@ -81,7 +98,7 @@ export function sortDeals(deals, sort, now = Date.now()) {
   return [...deals].sort((a, b) => {
     if (sort === 'discount') return (b.discount ?? -1) - (a.discount ?? -1) || a.name.localeCompare(b.name, 'ja');
     if (sort === 'name') return a.name.localeCompare(b.name, 'ja');
-    if (sort === 'new') return Number(Boolean(b.fresh)) - Number(Boolean(a.fresh)) || (Date.parse(b.checkedAt) || 0) - (Date.parse(a.checkedAt) || 0);
+    if (sort === 'new') return newTime(b) - newTime(a) || a.name.localeCompare(b.name, 'ja');
     const aEnded = statusOf(a, now) === 'ended', bEnded = statusOf(b, now) === 'ended';
     return Number(aEnded) - Number(bEnded) || (deadlineTime(a.deadline) ?? Infinity) - (deadlineTime(b.deadline) ?? Infinity) || a.name.localeCompare(b.name, 'ja');
   });

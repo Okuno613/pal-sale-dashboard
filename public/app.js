@@ -1,8 +1,8 @@
-import { mergeDeals, filterDeals, sortDeals, statusOf, daysLeft, deadlineTime } from './deals.js';
+import { mergeDeals, filterDeals, sortDeals, statusOf, daysLeft, deadlineTime, isNew } from './deals.js';
 
 const $ = selector => document.querySelector(selector);
 const form = $('#filters');
-const fieldNames = ['group', 'field', 'offerType', 'campaignType', 'minDiscount', 'deadline', 'status', 'onlySaved'];
+const fieldNames = ['group', 'field', 'offerType', 'campaignType', 'minDiscount', 'deadline', 'status', 'onlySaved', 'onlyNew'];
 const labels = { group: '系統', field: '分野', offerType: '特典', campaignType: '施策', minDiscount: '割引率', deadline: '期限', status: '状況' };
 let deals = [], lastPayload = null, saved = [], hasData = false;
 try { const stored = JSON.parse(localStorage.getItem('pal-saved') || '[]'); if (Array.isArray(stored)) saved = stored.filter(v => typeof v === 'string'); } catch { /* Storage may be unavailable. */ }
@@ -11,6 +11,7 @@ for (const key of ['minDiscount', 'deadline', 'status']) {
   if ([...form.elements[key].options].some(o => o.value === params.get(key))) form.elements[key].value = params.get(key);
 }
 form.elements.onlySaved.checked = params.get('saved') === '1';
+form.elements.onlyNew.checked = params.get('new') === '1';
 $('#search').value = params.get('q') || '';
 if ([...$('#sort').options].some(o => o.value === params.get('sort'))) $('#sort').value = params.get('sort');
 function toggleFilters(open) {
@@ -40,6 +41,7 @@ function persistParams() {
   for (const key of fieldNames) {
     const input = form.elements[key];
     if (key === 'onlySaved') { if (input.checked) next.set('saved', '1'); }
+    else if (key === 'onlyNew') { if (input.checked) next.set('new', '1'); }
     else if (input.value && !(key === 'status' && input.value === 'live')) next.set(key, input.value);
   }
   if ($('#search').value.trim()) next.set('q', $('#search').value.trim());
@@ -47,7 +49,7 @@ function persistParams() {
   history.replaceState(null, '', location.pathname + (next.size ? `?${next}` : ''));
 }
 function filters() {
-  return Object.fromEntries(fieldNames.map(key => [key, key === 'onlySaved' ? form.elements[key].checked : form.elements[key].value]).concat([['query', $('#search').value], ['saved', saved]]));
+  return Object.fromEntries(fieldNames.map(key => [key, ['onlySaved', 'onlyNew'].includes(key) ? form.elements[key].checked : form.elements[key].value]).concat([['query', $('#search').value], ['saved', saved]]));
 }
 function saveButton(deal) {
   const button = element('button', 'save', saved.includes(deal.id) ? '★' : '☆');
@@ -92,7 +94,7 @@ function card(deal) {
   const tags = element('div', 'tags');
   if (status === 'upcoming') tags.append(element('span', 'tag upcoming', '開催予定'));
   if (status === 'ended') tags.append(element('span', 'tag', '終了'));
-  if (deal.fresh && status !== 'ended') tags.append(element('span', 'tag fresh', 'NEW'));
+  if (isNew(deal) && status !== 'ended') tags.append(element('span', 'tag fresh', 'NEW'));
   tags.append(element('span', 'tag', deal.campaignType || '施策未確認'));
   const benefitRow = element('div', 'benefit-row');
   benefitRow.append(element('div', 'benefit', deal.benefit));
@@ -114,6 +116,7 @@ function render() {
   $('#soon-count').textContent = live.filter(d => { const days = daysLeft(d); return days !== null && days >= 0 && days <= 3; }).length;
   $('#annual-count').textContent = live.filter(d => d.offerType === '年額').length;
   $('#saved-count').textContent = deals.filter(d => saved.includes(d.id)).length;
+  $('#new-count').textContent = live.filter(d => isNew(d)).length;
   $('#result-count').textContent = `${filtered.length}件 / 全${deals.length}件`;
   $('#cards').replaceChildren(...filtered.map(card));
   $('#empty').hidden = filtered.length > 0;
@@ -125,7 +128,7 @@ function render() {
     chip.type = 'button'; chip.addEventListener('click', () => { input.value = key === 'status' ? 'live' : ''; render(); }); chips.push(chip);
   }
   $('#active-filters').replaceChildren(...chips);
-  const count = chips.length + Number(form.elements.onlySaved.checked);
+  const count = chips.length + Number(form.elements.onlySaved.checked) + Number(form.elements.onlyNew.checked);
   $('#filter-count').textContent = count; $('#filter-count').hidden = !count;
   $('#apply-filters').textContent = `${filtered.length}件を見る`;
   persistParams();
@@ -177,6 +180,7 @@ $('#detail').addEventListener('click', e => { if (e.target === $('#detail')) { c
 for (const button of document.querySelectorAll('[data-quick]')) button.addEventListener('click', () => {
   form.reset(); $('#search').value = ''; $('#sort').value = 'deadline';
   if (button.dataset.quick === 'soon') form.elements.deadline.value = '3';
+  if (button.dataset.quick === 'new') { form.elements.onlyNew.checked = true; $('#sort').value = 'new'; }
   if (button.dataset.quick === 'annual') form.elements.offerType.value = '年額';
   if (button.dataset.quick === 'saved') { form.elements.onlySaved.checked = true; form.elements.status.value = 'all'; }
   render(); $('.results').scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -16,7 +16,8 @@
     "url": "https://opencode.ai/docs/console/go/",
     "feedName": "OpenCode Go GLM-5.3 boost",
     "monogram": "OC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "qwen",
@@ -36,7 +37,8 @@
     "feedName": "Qwen Token Plan new-user half price",
     "monogram": "Q",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "adobe",
@@ -56,7 +58,8 @@
     "feedName": "Adobe CC Pro first year 44,118 JPY",
     "monogram": "Ad",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "elevenlabs",
@@ -75,7 +78,8 @@
     "url": "https://elevenlabs.io/ja/black-friday-promo",
     "feedName": "ElevenLabs Creator first year $99",
     "monogram": "II",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "1password",
@@ -95,7 +99,8 @@
     "feedName": "Sourcenext 1Password/Dropbox 3-year",
     "monogram": "1P",
     "checkedAt": "2026-11-19",
-    "starts": "2026-11-20T00:00:00+09:00"
+    "starts": "2026-11-20T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "dropbox",
@@ -115,7 +120,8 @@
     "feedName": null,
     "monogram": "Db",
     "checkedAt": "2026-11-19",
-    "starts": "2026-11-20T00:00:00+09:00"
+    "starts": "2026-11-20T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "openart",
@@ -135,7 +141,8 @@
     "feedName": "OpenArt annual up to 40% off",
     "monogram": "OA",
     "checkedAt": "2026-11-19",
-    "maxDiscount": true
+    "maxDiscount": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "kimi",
@@ -154,7 +161,8 @@
     "url": "https://www.kimi.com/code",
     "feedName": "Kimi K2.8 Preview credits 50% off",
     "monogram": "K",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "kiro",
@@ -173,7 +181,8 @@
     "url": "https://kiro.dev/pricing/",
     "feedName": "Kiro Pro free trial + 500 credits",
     "monogram": "Ki",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "codex",
@@ -192,7 +201,8 @@
     "url": "https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu-credit-based-pricing",
     "feedName": "Codex Business credits GPT-5.6 Sol price cut",
     "monogram": "Cx",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "claude",
@@ -212,7 +222,8 @@
     "feedName": "Claude usage bundles 10-30% off",
     "monogram": "Cl",
     "checkedAt": "2026-11-19",
-    "maxDiscount": true
+    "maxDiscount": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "google-pixel",
@@ -231,7 +242,8 @@
     "url": "https://one.google.com/offer/terms-and-conditions/pixel11pro",
     "feedName": "Google AI Pro 6 months with Pixel 11 Pro",
     "monogram": "G",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "manus",
@@ -251,7 +263,8 @@
     "feedName": "Manus welcome back 50-90% off",
     "monogram": "M",
     "checkedAt": "2026-11-19",
-    "maxDiscount": true
+    "maxDiscount": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "openrouter",
@@ -270,7 +283,8 @@
     "url": "https://x.com/OpenRouter/status/2122376401064189978",
     "feedName": "OpenRouter Hy4 Flash 50% off",
     "monogram": "OR",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "openmodel",
@@ -290,7 +304,8 @@
     "feedName": "OpenModel Black Friday top-up bonus",
     "monogram": "OM",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "opencode-flash",
@@ -309,7 +324,8 @@
     "url": "https://x.com/opencode/status/2123106127030210786",
     "feedName": "OpenCode Hy4 Flash free 10 days",
     "monogram": "OC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "opencode-seaglass",
@@ -328,7 +344,8 @@
     "url": "https://opencode.ai/docs/zen/",
     "feedName": "OpenCode Seaglass Alpha free",
     "monogram": "OC",
-    "checkedAt": "2026-11-27"
+    "checkedAt": "2026-11-27",
+    "addedAt": "2026-11-27"
   },
   {
     "id": "vercel-hy4",
@@ -347,7 +364,8 @@
     "url": "https://vercel.com/changelog/tencent-hy4-now-available-on-ai-gateway",
     "feedName": "Vercel AI Gateway Hy4/Hy4 Flash 50% off",
     "monogram": "V",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "vercel-flash",
@@ -366,7 +384,8 @@
     "url": "https://vercel.com/changelog/hy4-flash-now-available-on-ai-gateway-for-50-off",
     "feedName": null,
     "monogram": "V",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cometapi",
@@ -387,7 +406,8 @@
     "monogram": "CA",
     "checkedAt": "2026-11-19",
     "maxDiscount": true,
-    "starts": "2026-11-23T00:00:00+09:00"
+    "starts": "2026-11-23T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "hiapi",
@@ -408,7 +428,8 @@
     "monogram": "Hi",
     "checkedAt": "2026-11-19",
     "preciseDeadline": true,
-    "starts": "2026-11-24T17:00:00+09:00"
+    "starts": "2026-11-24T17:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "typingmind",
@@ -427,7 +448,8 @@
     "url": "https://docs.typingmind.com/resources/ai-black-friday-deals",
     "feedName": "TypingMind lifetime 60% off",
     "monogram": "TM",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "nous",
@@ -446,7 +468,8 @@
     "url": "https://x.com/NousResearch/status/2122411675412463689",
     "feedName": "Nous Portal Hy4 Flash free 2 weeks",
     "monogram": "N",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "proton",
@@ -465,7 +488,8 @@
     "url": "https://proton.me/ja/pass/black-friday",
     "feedName": null,
     "monogram": "P",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "superlist",
@@ -484,7 +508,8 @@
     "url": "https://www.superlist.com/blackfriday2026",
     "feedName": null,
     "monogram": "S",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "prowritingaid",
@@ -503,7 +528,8 @@
     "url": "https://prowritingaid.com/coupon-codes",
     "feedName": null,
     "monogram": "PW",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "rakuten",
@@ -524,7 +550,8 @@
     "monogram": "R",
     "checkedAt": "2026-11-19",
     "preciseDeadline": true,
-    "starts": "2026-11-19T20:00:00+09:00"
+    "starts": "2026-11-19T20:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "amazon",
@@ -544,7 +571,8 @@
     "feedName": null,
     "monogram": "a",
     "checkedAt": "2026-11-19",
-    "starts": "2026-11-27T00:00:00+09:00"
+    "starts": "2026-11-27T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "bic",
@@ -563,7 +591,8 @@
     "url": "https://www.biccamera.com/bc/c/sale/daily/index.jsp",
     "feedName": null,
     "monogram": "B",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "nojima",
@@ -582,7 +611,8 @@
     "url": "https://www.nojima.co.jp/news/category/press/746002/",
     "feedName": null,
     "monogram": "No",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "aeon",
@@ -603,7 +633,8 @@
     "monogram": "Ae",
     "checkedAt": "2026-11-19",
     "maxDiscount": true,
-    "starts": "2026-11-20T00:00:00+09:00"
+    "starts": "2026-11-20T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "yahoo",
@@ -625,7 +656,8 @@
     "checkedAt": "2026-11-19",
     "preciseDeadline": true,
     "maxDiscount": true,
-    "starts": "2026-11-22T00:00:00+09:00"
+    "starts": "2026-11-22T00:00:00+09:00",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "copilot",
@@ -644,7 +676,8 @@
     "url": "https://github.com/features/copilot/plans",
     "feedName": null,
     "monogram": "GH",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "junie",
@@ -663,7 +696,8 @@
     "url": "https://www.jetbrains.com/junie/",
     "feedName": null,
     "monogram": "JB",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "qoder",
@@ -682,7 +716,8 @@
     "url": "https://qoder.com/pricing",
     "feedName": null,
     "monogram": "Qo",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "zed",
@@ -701,7 +736,8 @@
     "url": "https://zed.dev/pricing",
     "feedName": null,
     "monogram": "Z",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "lovable",
@@ -720,7 +756,8 @@
     "url": "https://lovable.dev/students",
     "feedName": null,
     "monogram": "L",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "amp",
@@ -739,157 +776,166 @@
     "url": "https://ampcode.com/",
     "feedName": null,
     "monogram": "&",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
-    {
-      "id": "devin-poke",
-      "name": "Devin Bots × Poke",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "クレジット",
-      "campaignType": "会話・アイデア特典",
-      "benefit": "Devin Bot＋利用クレジット",
-      "serviceSummary": "常時稼働する開発エージェント。Botが複数のDevinセッションを動かす。",
-      "serviceUrl": "https://poke.com/bots",
-      "description": "Pokeにアイデアを話して申請。公式告知は1万アカウント、各最大$10,000と案内。",
-      "shortCondition": "付与額は会話次第。全員への上限額付与ではありません。",
-      "conditions": "Pokeとの会話でアイデアを伝える企画です。付与可否・金額は一律ではなく、最大$10,000の保証ではありません。プラン名・利用期間・受付終了日・詳しい判定条件は公開情報で確認できていません。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://x.com/walden_yan/status/2123163580778635579",
-      "monogram": "Dv",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "opencode-challenge",
-      "name": "OpenCode Go 投稿チャレンジ",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "参加特典",
-      "campaignType": "投稿・参加特典",
-      "benefit": "Go 1年間無料の企画",
-      "serviceSummary": "オープンソースの開発エージェント。Goはモデルを利用する有料枠。",
-      "serviceUrl": "https://opencode.ai/docs/console/go/",
-      "description": "GTA6内でDaxのお気に入りのアイス店を見つけ、画像を投稿する公式企画。",
-      "shortCondition": "投稿が条件。受付状況・配布数・終了日は未確認。",
-      "conditions": "公式投稿にある指定の場所の画像を見つけて投稿する企画。ヒントはPeacock Bay。全員向けの無料配布ではありません。詳しい応募手順・配布数・終了日は公式投稿をご確認ください。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://x.com/opencode/status/2123297341679554787",
-      "monogram": "OC",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "freemilk",
-      "name": "FreeMilk · DeepSeek無料枠",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "無料枠",
-      "campaignType": "モデル無料開放",
-      "benefit": "DeepSeek入出力無料",
-      "serviceSummary": "広告で支える開発エージェント。DeepSeek・Claude・GLM等のモデルに対応。",
-      "serviceUrl": "https://freemilk.ai/",
-      "description": "DeepSeek v4.1 1017の入力・出力・キャッシュ料金を$0と公式が案内。",
-      "conditions": "FreeMilk上の対象モデルの案内であり、他社APIも無料になる特典ではありません。終了日・公平利用枠などの詳細は未確認。最新の対象モデル・利用制限は公式画面をご確認ください。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://x.com/freemilk_ai/status/2123170123334947214",
-      "monogram": "FM",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "kaggle-gpu",
-      "name": "Kaggle Notebooks · GPU無料枠",
-      "group": "AIサービス",
-      "field": "GPU・クラウド",
-      "offerType": "無料枠",
-      "campaignType": "無料枠",
-      "benefit": "GPU付きNotebook無料枠",
-      "serviceSummary": "ブラウザーでPython・Rを動かす機械学習環境。データ分析やモデル学習向け。",
-      "serviceUrl": "https://www.kaggle.com/docs/notebooks",
-      "description": "Kaggleの無料GPU環境。新規セールではなく、継続提供の計算資源枠。",
-      "conditions": "GPU利用には週間の利用枠があり、空き状況によって待ち時間があります。GPU機種や時間の割当は変わり得るため、投稿のT4×2を常時保証するものではありません。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://www.kaggle.com/docs/efficient-gpu-usage",
-      "monogram": "Kg",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "codex-students",
-      "name": "Codex for Students",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "クレジット",
-      "campaignType": "学割",
-      "benefit": "学生に$100分のクレジット",
-      "serviceSummary": "OpenAIの開発エージェント。コードの理解・実装・レビュー・修正を支援。",
-      "serviceUrl": "https://developers.openai.com/codex/",
-      "description": "認証済みの対象大学生にCodex用ChatGPTクレジットを付与。付与から12か月有効。",
-      "shortCondition": "米国・カナダの対象大学に在籍し、受取時も現地居住。",
-      "conditions": "米国またはカナダの大学に在籍し、受取時も米国またはカナダに居住する学生が対象。認証が必要で学生1人につき1回。OpenAI API用の残高ではなく、Codex向けChatGPTクレジットです。申込期限は未記載。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://developers.openai.com/community/students",
-      "monogram": "Cx",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "kiro-students",
-      "name": "Kiro for students",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "クレジット",
-      "campaignType": "学割",
-      "benefit": "月1,000 credits × 1年",
-      "serviceSummary": "AI開発エージェント。仕様・計画から実装、レビュー、検証まで支援。",
-      "serviceUrl": "https://kiro.dev/",
-      "description": "対象大学の学生向けに、月1,000クレジットを1年間無料で提供。",
-      "shortCondition": "対象校の学生向け。すべての学校が対象ではありません。",
-      "conditions": "公式対象校リストに載る大学の在学生向けです。学生認証や対象条件を公式ページで確認してください。申込期限は未記載。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://kiro.dev/students/",
-      "monogram": "Ki",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "v0-students",
-      "name": "v0 for Students",
-      "group": "AIサービス",
-      "field": "開発・API",
-      "offerType": "無料体験",
-      "campaignType": "学割",
-      "benefit": "学生向け1年間無料",
-      "serviceSummary": "VercelのAI開発サービス。自然言語からWebアプリの画面やコードを作成。",
-      "serviceUrl": "https://v0.app/students",
-      "description": "対象校で学生認証を受けると、v0を1年間無料で利用できる学生プログラム。",
-      "shortCondition": "対象校限定。具体的な月額利用枠は公式で要確認。",
-      "conditions": "公式ページの対象校で学生認証を受ける必要があります。すべての大学向けではありません。具体的な利用枠・申込期限は公開ページで確認できていません。",
-      "discount": null,
-      "deadline": null,
-      "url": "https://v0.app/students",
-      "monogram": "v0",
-      "checkedAt": "2026-11-19"
-    },
-    {
-      "id": "fireworks-training",
-      "name": "Fireworks · Muse Glimmer学習",
-      "group": "AIサービス",
-      "field": "モデル学習",
-      "offerType": "無料枠",
-      "campaignType": "期間限定・無料学習",
-      "benefit": "30Bモデルの学習無料",
-      "serviceSummary": "モデルの学習・推論を提供するAI基盤。対象はMuse Glimmer 30B。",
-      "serviceUrl": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
-      "description": "Muse Glimmer 30BのSFT・DPO・RL学習を11/30まで無料提供。",
-      "shortCondition": "無料なのは対象モデルの学習。推論・評価まで無料とは限りません。",
-      "conditions": "Free Weights Clubの期間限定企画。対象はMuse Glimmer 30BのSFT・DPO・RL学習です。推論や評価まで無料になるとは案内されていないため、実行時の料金を公式で確認してください。終了時刻は未確認。",
-      "discount": null,
-      "deadline": "2026-11-30",
-      "url": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
-      "monogram": "Fw",
-      "checkedAt": "2026-11-19"
+  {
+    "id": "devin-poke",
+    "name": "Devin Bots × Poke",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "クレジット",
+    "campaignType": "会話・アイデア特典",
+    "benefit": "Devin Bot＋利用クレジット",
+    "serviceSummary": "常時稼働する開発エージェント。Botが複数のDevinセッションを動かす。",
+    "serviceUrl": "https://poke.com/bots",
+    "description": "Pokeにアイデアを話して申請。公式告知は1万アカウント、各最大$10,000と案内。",
+    "shortCondition": "付与額は会話次第。全員への上限額付与ではありません。",
+    "conditions": "Pokeとの会話でアイデアを伝える企画です。付与可否・金額は一律ではなく、最大$10,000の保証ではありません。プラン名・利用期間・受付終了日・詳しい判定条件は公開情報で確認できていません。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://x.com/walden_yan/status/2123163580778635579",
+    "monogram": "Dv",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "opencode-challenge",
+    "name": "OpenCode Go 投稿チャレンジ",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "参加特典",
+    "campaignType": "投稿・参加特典",
+    "benefit": "Go 1年間無料の企画",
+    "serviceSummary": "オープンソースの開発エージェント。Goはモデルを利用する有料枠。",
+    "serviceUrl": "https://opencode.ai/docs/console/go/",
+    "description": "GTA6内でDaxのお気に入りのアイス店を見つけ、画像を投稿する公式企画。",
+    "shortCondition": "投稿が条件。受付状況・配布数・終了日は未確認。",
+    "conditions": "公式投稿にある指定の場所の画像を見つけて投稿する企画。ヒントはPeacock Bay。全員向けの無料配布ではありません。詳しい応募手順・配布数・終了日は公式投稿をご確認ください。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://x.com/opencode/status/2123297341679554787",
+    "monogram": "OC",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "freemilk",
+    "name": "FreeMilk · DeepSeek無料枠",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "無料枠",
+    "campaignType": "モデル無料開放",
+    "benefit": "DeepSeek入出力無料",
+    "serviceSummary": "広告で支える開発エージェント。DeepSeek・Claude・GLM等のモデルに対応。",
+    "serviceUrl": "https://freemilk.ai/",
+    "description": "DeepSeek v4.1 1017の入力・出力・キャッシュ料金を$0と公式が案内。",
+    "conditions": "FreeMilk上の対象モデルの案内であり、他社APIも無料になる特典ではありません。終了日・公平利用枠などの詳細は未確認。最新の対象モデル・利用制限は公式画面をご確認ください。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://x.com/freemilk_ai/status/2123170123334947214",
+    "monogram": "FM",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "kaggle-gpu",
+    "name": "Kaggle Notebooks · GPU無料枠",
+    "group": "AIサービス",
+    "field": "GPU・クラウド",
+    "offerType": "無料枠",
+    "campaignType": "無料枠",
+    "benefit": "GPU付きNotebook無料枠",
+    "serviceSummary": "ブラウザーでPython・Rを動かす機械学習環境。データ分析やモデル学習向け。",
+    "serviceUrl": "https://www.kaggle.com/docs/notebooks",
+    "description": "Kaggleの無料GPU環境。新規セールではなく、継続提供の計算資源枠。",
+    "conditions": "GPU利用には週間の利用枠があり、空き状況によって待ち時間があります。GPU機種や時間の割当は変わり得るため、投稿のT4×2を常時保証するものではありません。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://www.kaggle.com/docs/efficient-gpu-usage",
+    "monogram": "Kg",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "codex-students",
+    "name": "Codex for Students",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "クレジット",
+    "campaignType": "学割",
+    "benefit": "学生に$100分のクレジット",
+    "serviceSummary": "OpenAIの開発エージェント。コードの理解・実装・レビュー・修正を支援。",
+    "serviceUrl": "https://developers.openai.com/codex/",
+    "description": "認証済みの対象大学生にCodex用ChatGPTクレジットを付与。付与から12か月有効。",
+    "shortCondition": "米国・カナダの対象大学に在籍し、受取時も現地居住。",
+    "conditions": "米国またはカナダの大学に在籍し、受取時も米国またはカナダに居住する学生が対象。認証が必要で学生1人につき1回。OpenAI API用の残高ではなく、Codex向けChatGPTクレジットです。申込期限は未記載。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://developers.openai.com/community/students",
+    "monogram": "Cx",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "kiro-students",
+    "name": "Kiro for students",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "クレジット",
+    "campaignType": "学割",
+    "benefit": "月1,000 credits × 1年",
+    "serviceSummary": "AI開発エージェント。仕様・計画から実装、レビュー、検証まで支援。",
+    "serviceUrl": "https://kiro.dev/",
+    "description": "対象大学の学生向けに、月1,000クレジットを1年間無料で提供。",
+    "shortCondition": "対象校の学生向け。すべての学校が対象ではありません。",
+    "conditions": "公式対象校リストに載る大学の在学生向けです。学生認証や対象条件を公式ページで確認してください。申込期限は未記載。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://kiro.dev/students/",
+    "monogram": "Ki",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "v0-students",
+    "name": "v0 for Students",
+    "group": "AIサービス",
+    "field": "開発・API",
+    "offerType": "無料体験",
+    "campaignType": "学割",
+    "benefit": "学生向け1年間無料",
+    "serviceSummary": "VercelのAI開発サービス。自然言語からWebアプリの画面やコードを作成。",
+    "serviceUrl": "https://v0.app/students",
+    "description": "対象校で学生認証を受けると、v0を1年間無料で利用できる学生プログラム。",
+    "shortCondition": "対象校限定。具体的な月額利用枠は公式で要確認。",
+    "conditions": "公式ページの対象校で学生認証を受ける必要があります。すべての大学向けではありません。具体的な利用枠・申込期限は公開ページで確認できていません。",
+    "discount": null,
+    "deadline": null,
+    "url": "https://v0.app/students",
+    "monogram": "v0",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
+  },
+  {
+    "id": "fireworks-training",
+    "name": "Fireworks · Muse Glimmer学習",
+    "group": "AIサービス",
+    "field": "モデル学習",
+    "offerType": "無料枠",
+    "campaignType": "期間限定・無料学習",
+    "benefit": "30Bモデルの学習無料",
+    "serviceSummary": "モデルの学習・推論を提供するAI基盤。対象はMuse Glimmer 30B。",
+    "serviceUrl": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
+    "description": "Muse Glimmer 30BのSFT・DPO・RL学習を11/30まで無料提供。",
+    "shortCondition": "無料なのは対象モデルの学習。推論・評価まで無料とは限りません。",
+    "conditions": "Free Weights Clubの期間限定企画。対象はMuse Glimmer 30BのSFT・DPO・RL学習です。推論や評価まで無料になるとは案内されていないため、実行時の料金を公式で確認してください。終了時刻は未確認。",
+    "discount": null,
+    "deadline": "2026-11-30",
+    "url": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
+    "monogram": "Fw",
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "mindpal-bf",
@@ -907,7 +953,8 @@
     "deadline": null,
     "url": "https://mindpal.space/",
     "monogram": "MP",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "rewritebar-bf",
@@ -926,7 +973,8 @@
     "url": "https://rewritebar.com/black-friday",
     "monogram": "RB",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "rewritebar-creator",
@@ -944,7 +992,8 @@
     "deadline": null,
     "url": "https://rewritebar.com/discount",
     "monogram": "RB",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "krea-annual-bf",
@@ -962,7 +1011,8 @@
     "deadline": null,
     "url": "https://www.krea.ai/pricing",
     "monogram": "Kr",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "krea-seedance-bf",
@@ -980,7 +1030,8 @@
     "deadline": null,
     "url": "https://www.krea.ai/pricing",
     "monogram": "Kr",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "pimosa-bf",
@@ -998,7 +1049,8 @@
     "deadline": null,
     "url": "https://pimosa.app/",
     "monogram": "Pi",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "wins-bf",
@@ -1016,7 +1068,8 @@
     "deadline": null,
     "url": "https://wins.cool/",
     "monogram": "Wi",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "seedeo-bf",
@@ -1035,7 +1088,8 @@
     "url": "https://seedeo.ai/ja/black-friday",
     "monogram": "Se",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "kittl-token-back",
@@ -1053,7 +1107,8 @@
     "deadline": "2026-11-20",
     "url": "https://www.kittl.com/blogs/a-week-of-ads-and-social-posts-from-one-photo-of-your-product/",
     "monogram": "Ki",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "leonardo-free",
@@ -1071,7 +1126,8 @@
     "deadline": null,
     "url": "https://leonardo.ai/pricing/",
     "monogram": "Le",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "heygen-free",
@@ -1089,7 +1145,8 @@
     "deadline": null,
     "url": "https://www.heygen.com/pricing",
     "monogram": "HG",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "opusclip-free",
@@ -1107,7 +1164,8 @@
     "deadline": null,
     "url": "https://www.opus.pro/",
     "monogram": "OC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "vercel-ai-free",
@@ -1125,7 +1183,8 @@
     "deadline": null,
     "url": "https://vercel.com/docs/ai-gateway/pricing",
     "monogram": "V",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cloudflare-ai-free",
@@ -1143,7 +1202,8 @@
     "deadline": null,
     "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
     "monogram": "CF",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "nvidia-nim-free",
@@ -1161,7 +1221,8 @@
     "deadline": null,
     "url": "https://build.nvidia.com/",
     "monogram": "NV",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cohere-trial",
@@ -1179,7 +1240,8 @@
     "deadline": null,
     "url": "https://cohere.com/pricing",
     "monogram": "Co",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cerebras-trial",
@@ -1197,7 +1259,8 @@
     "deadline": null,
     "url": "https://www.cerebras.ai/inference",
     "monogram": "Ce",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "gemini-api-free",
@@ -1215,7 +1278,8 @@
     "deadline": null,
     "url": "https://ai.google.dev/gemini-api/docs/pricing",
     "monogram": "G",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "exa-free",
@@ -1233,7 +1297,8 @@
     "deadline": null,
     "url": "https://exa.ai/pricing",
     "monogram": "Ex",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "tavily-free",
@@ -1251,7 +1316,8 @@
     "deadline": null,
     "url": "https://tavily.com/pricing",
     "monogram": "Ta",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "firecrawl-free",
@@ -1269,7 +1335,8 @@
     "deadline": null,
     "url": "https://www.firecrawl.dev/pricing",
     "monogram": "FC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "you-mcp-free",
@@ -1287,7 +1354,8 @@
     "deadline": null,
     "url": "https://you.com/pricing",
     "monogram": "You",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "rime-free",
@@ -1305,7 +1373,8 @@
     "deadline": null,
     "url": "https://www.rime.ai/pricing",
     "monogram": "Ri",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "infomaniak-trial",
@@ -1323,7 +1392,8 @@
     "deadline": null,
     "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services",
     "monogram": "In",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "modal-free",
@@ -1341,7 +1411,8 @@
     "deadline": null,
     "url": "https://modal.com/pricing",
     "monogram": "Mo",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "lightning-free",
@@ -1359,7 +1430,8 @@
     "deadline": null,
     "url": "https://lightning.ai/pricing",
     "monogram": "LA",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "google-cloud-trial",
@@ -1377,7 +1449,8 @@
     "deadline": null,
     "url": "https://cloud.google.com/free/docs/free-cloud-features",
     "monogram": "GC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "azure-trial",
@@ -1395,7 +1468,8 @@
     "deadline": null,
     "url": "https://azure.microsoft.com/en-us/free/",
     "monogram": "Az",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "oracle-trial",
@@ -1413,7 +1487,8 @@
     "deadline": null,
     "url": "https://www.oracle.com/cloud/free/",
     "monogram": "OCI",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "aws-free-tier",
@@ -1431,7 +1506,8 @@
     "deadline": null,
     "url": "https://aws.amazon.com/free/",
     "monogram": "AWS",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "notion-education",
@@ -1449,7 +1525,8 @@
     "deadline": null,
     "url": "https://www.notion.com/product/notion-for-education",
     "monogram": "N",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "figma-education",
@@ -1467,7 +1544,8 @@
     "deadline": null,
     "url": "https://www.figma.com/education/",
     "monogram": "Fi",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "gemini-students",
@@ -1485,7 +1563,8 @@
     "deadline": null,
     "url": "https://gemini.google/students/",
     "monogram": "G",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "copilot-students",
@@ -1503,7 +1582,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "GH",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "jetbrains-students",
@@ -1521,7 +1601,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "JB",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "1password-students",
@@ -1539,7 +1620,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "1P",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "datacamp-students",
@@ -1557,7 +1639,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "DC",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "educative-students",
@@ -1575,7 +1658,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "Ed",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "heroku-students",
@@ -1593,7 +1677,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "He",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "termius-students",
@@ -1611,7 +1696,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "Te",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "mongodb-students",
@@ -1629,7 +1715,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "MDB",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "deepnote-students",
@@ -1647,7 +1734,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "Dn",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "gitkraken-students",
@@ -1665,7 +1753,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "GK",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "polypane-students",
@@ -1683,7 +1772,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "Po",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "browserstack-students",
@@ -1701,7 +1791,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "BS",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "azure-students",
@@ -1719,7 +1810,8 @@
     "deadline": null,
     "url": "https://education.github.com/pack",
     "monogram": "Az",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "proxyman-education",
@@ -1737,7 +1829,8 @@
     "deadline": null,
     "url": "https://proxyman.com/pricing",
     "monogram": "Px",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "pascal-free",
@@ -1755,7 +1848,8 @@
     "deadline": null,
     "url": "https://editor.pascal.app/docs/account/credits",
     "monogram": "Pa",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cent-ai-daily-draw",
@@ -1773,7 +1867,8 @@
     "deadline": null,
     "url": "https://cent-ai.dev/event",
     "monogram": "Ce",
-    "checkedAt": "2026-11-19"
+    "checkedAt": "2026-11-19",
+    "addedAt": "2026-11-19"
   },
   {
     "id": "cent-ai-hy4-flash",
@@ -1792,7 +1887,8 @@
     "url": "https://cent-ai.dev/",
     "monogram": "Ce",
     "checkedAt": "2026-11-19",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-19"
   },
   {
     "id": "suno",
@@ -1811,7 +1907,8 @@
     "url": "https://suno.com/pricing",
     "feedName": "Suno annual plans 30% off Black Friday",
     "monogram": "S",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "invideo",
@@ -1831,7 +1928,8 @@
     "feedName": "invideo Plus 60% off Max 60% off",
     "monogram": "iV",
     "checkedAt": "2026-11-27",
-    "maxDiscount": true
+    "maxDiscount": true,
+    "addedAt": "2026-11-25"
   },
   {
     "id": "grammarly",
@@ -1850,7 +1948,8 @@
     "url": "https://www.grammarly.com/black-friday",
     "feedName": "Grammarly Pro 55% off Black Friday",
     "monogram": "G",
-    "checkedAt": "2026-11-27"
+    "checkedAt": "2026-11-27",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "epic-mark-of-the-deep",
@@ -1870,7 +1969,8 @@
     "feedName": "Epic Games Store 無料配布: Mark of the Deep",
     "monogram": "Ep",
     "checkedAt": "2026-11-25",
-    "preciseDeadline": true
+    "preciseDeadline": true,
+    "addedAt": "2026-11-25"
   },
   {
     "id": "koofr",
@@ -1889,7 +1989,8 @@
     "url": "https://www.appinn.com/koofr-1tb",
     "feedName": "Koofr 云存储：免费 10GB 空间，支持 WebDAV、Rclone｜终身订阅 1TB 特价129.9美元【再次】",
     "monogram": "Ko",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "parallels-desktop-27",
@@ -1908,7 +2009,8 @@
     "url": "https://www.appinn.com/parallels-desktop-27",
     "feedName": "Parallels Desktop 27 最新优惠，黑五史低 249元/年，：在 Mac 上运行多个操作系统",
     "monogram": "Pd",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "dedirock",
@@ -1927,7 +2029,8 @@
     "url": "https://www.iplaysoft.com/p/dedirock",
     "feedName": "DediRock 白菜低价 VPS 黑五促销开启！主打便宜/大硬盘的美国服务器",
     "monogram": "Dr",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "racknerd",
@@ -1946,7 +2049,8 @@
     "url": "https://www.iplaysoft.com/p/racknerd",
     "feedName": "RackNerd 性价比 VPS 服务器「黑五特价」促销中！终身续费同价",
     "monogram": "Rn",
-    "checkedAt": "2026-11-25"
+    "checkedAt": "2026-11-25",
+    "addedAt": "2026-11-25"
   },
   {
     "id": "appsumo-dm-champ",
@@ -1965,7 +2069,8 @@
     "url": "https://appsumo.com/products/dm-champ/",
     "feedName": "DM Champ lifetime 10% off",
     "monogram": "DM",
-    "checkedAt": "2026-11-27"
+    "checkedAt": "2026-11-27",
+    "addedAt": "2026-11-26"
   },
   {
     "id": "appsumo-a-leads",
@@ -1984,7 +2089,8 @@
     "url": "https://appsumo.com/products/a-leads/",
     "feedName": "A-Leads lifetime 10% off",
     "monogram": "AL",
-    "checkedAt": "2026-11-28"
+    "checkedAt": "2026-11-28",
+    "addedAt": "2026-11-27"
   },
   {
     "id": "appsumo-visby",
@@ -2003,6 +2109,7 @@
     "url": "https://appsumo.com/products/visby/",
     "feedName": "Visby lifetime 10% off",
     "monogram": "Vi",
-    "checkedAt": "2026-11-26"
+    "checkedAt": "2026-11-26",
+    "addedAt": "2026-11-26"
   }
 ]

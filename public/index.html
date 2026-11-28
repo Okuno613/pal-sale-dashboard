@@ -25,6 +25,7 @@
     </section>
     <section class="stats" aria-label="セールの概況">
       <button type="button" data-quick="live"><span>開催中・予定</span><strong id="total-count">—</strong></button>
+      <button type="button" data-quick="new" class="new"><span>新着・直近の追加</span><strong id="new-count">—</strong></button>
       <button type="button" data-quick="soon" class="hot"><span>3日以内に終了</span><strong id="soon-count">—</strong></button>
       <button type="button" data-quick="annual"><span>年額プラン</span><strong id="annual-count">—</strong></button>
       <button type="button" data-quick="saved"><span>気になる ★</span><strong id="saved-count">0</strong></button>
@@ -47,6 +48,7 @@
           <label>終了まで<select name="deadline"><option value="">すべて（期限未定を含む）</option><option value="0">今日まで</option><option value="3">3日以内</option><option value="7">7日以内</option><option value="14">14日以内</option></select></label>
           <label>開催状況<select name="status"><option value="live">開催中・開催予定</option><option value="active">開催中のみ</option><option value="upcoming">開催予定のみ</option><option value="ended">終了したセール</option><option value="all">すべて</option></select></label>
           <label class="check-label"><input type="checkbox" name="onlySaved">気になるものだけ</label>
+          <label class="check-label"><input type="checkbox" name="onlyNew">新着だけ（直近1週間）</label>
           <p class="filter-note">割引率が不明な特典や増量特典は、割引率の絞り込みから除外します。</p>
           <button id="apply-filters" class="button sheet-only" type="button">結果を見る</button>
         </form>

@@ -40,12 +40,13 @@ h1{font-size:clamp(28px,4.2vw,44px);font-weight:800;letter-spacing:-.02em;line-h
 .lede{color:var(--text-muted);font-size:14px;margin:0}
 
 /* Stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 24px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:28px 0 24px}
 .stats button{position:relative;text-align:left;border:1px solid var(--border);background:linear-gradient(180deg,var(--surface),var(--bg-2));border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:2px;transition:border-color .15s,transform .15s}
 .stats button:hover{border-color:var(--border-strong);transform:translateY(-1px)}
 .stats span{font-size:12px;color:var(--text-muted)}
 .stats strong{font-size:30px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
 .stats .hot strong{color:var(--urgent)}
+.stats .new strong{color:var(--mint)}
 .notice{font-size:13px;padding:12px 16px;border:1px solid rgb(255 143 94 / 30%);background:var(--urgent-bg);border-radius:var(--radius-sm);color:var(--urgent);margin:0 0 20px}
 
 /* Tools */

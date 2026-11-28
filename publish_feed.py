@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent
 PUBLIC_FIELDS = ('name', 'url', 'deadline', 'titleJa', 'group', 'field', 'offerType',
                  'benefit', 'description', 'conditions', 'discount', 'starts', 'checkedAt',
-                 'serviceSummary', 'serviceUrl', 'campaignType')
+                 'addedAt', 'serviceSummary', 'serviceUrl', 'campaignType')
 
 
 def sanitize(raw):

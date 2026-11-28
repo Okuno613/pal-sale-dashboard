@@ -13,6 +13,12 @@ class DealsCliTests(unittest.TestCase):
         self.assertIsNone(feed['seen'][0]['discount'])
         self.assertEqual(feed['seen'][0]['benefit'], '50% OFF')
         self.assertEqual(feed['seen'][1]['checkedAt'], '2026-11-28')
+        self.assertEqual(feed['seen'][1]['addedAt'], '2026-11-28')
+        self.assertNotIn('addedAt', feed['seen'][0])  # updates never add or move addedAt
+        added2, _ = upsert([{'name': 'C', 'url': 'https://example.com/c'}], feed, checked='2026-11-29')
+        self.assertEqual(feed['seen'][2]['addedAt'], '2026-11-29')
+        upsert([{'name': 'B', 'benefit': 'new benefit'}], feed, checked='2026-11-30')
+        self.assertEqual(feed['seen'][1]['addedAt'], '2026-11-28')
 
     def test_upsert_rejects_unsafe_records(self):
         with self.assertRaises(ValueError):
