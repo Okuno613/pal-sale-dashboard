@@ -1976,15 +1976,15 @@
     "group": "AIサービス",
     "field": "仕事・生活",
     "offerType": "買い切り",
-    "benefit": "$67.15（通常 $79）",
-    "description": "B2Bリード検索・連絡先エンリッチメントツールの生涯ライセンスが$67.15。リアルタイムで検証済みのメール・電話番号、CRM連携に対応。",
-    "conditions": "AppSumoでの販売。15%オフは11/27までと表示。ブラックフライデーセールは12/2頃まで継続の見込み。価格は出典をご確認ください。",
-    "discount": 15,
-    "deadline": "2026-11-27",
+    "benefit": "$71.10（通常 $79）",
+    "description": "B2Bリード検索・連絡先エンリッチメントツールの生涯ライセンスが$71.10。リアルタイムで検証済みのメール・電話番号、CRM連携に対応。",
+    "conditions": "AppSumoでの販売。15%オフは11/27で終了し、10%オフに戻った。ブラックフライデーセールは12/2頃まで継続の見込み。価格は出典をご確認ください。",
+    "discount": 10,
+    "deadline": "2026-12-02",
     "url": "https://appsumo.com/products/a-leads/",
-    "feedName": "A-Leads lifetime 15% off",
+    "feedName": "A-Leads lifetime 10% off",
     "monogram": "AL",
-    "checkedAt": "2026-11-27"
+    "checkedAt": "2026-11-28"
   },
   {
     "id": "appsumo-visby",
