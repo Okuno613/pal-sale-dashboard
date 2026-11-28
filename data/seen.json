@@ -841,7 +841,43 @@
       "serviceSummary": "AI開発プラットフォーム。エディター・CLI・クラウドでエージェントを利用。",
       "serviceUrl": "https://qoder.com/",
       "campaignType": "期間限定無料"
+    },
+    {
+      "name": "ChatGPT Pro/Business monthly API credits",
+      "url": "https://developers.openai.com/api/docs/guides/chatgpt-api-credits",
+      "deadline": null,
+      "titleJa": "ChatGPT Pro・Business：毎月最大$500のAPIクレジット",
+      "group": "AIサービス",
+      "field": "生成AI API",
+      "offerType": "契約特典",
+      "benefit": "Proは$100〜$500／月、API利用に使える無料クレジット",
+      "description": "対象のChatGPT Pro・Business契約を自分のAPI組織に紐付けると、毎月プラン相当額までAPI利用が無料クレジットで消化できる。有効化は1回で、契約更新ごとに自動付与。",
+      "conditions": "対象：Pro 100/200/500、Business（Standard席$20／Premium席$100、1ワークスペース月$500上限）。Plus・無料体験・Enterprise・Eduは対象外。申込はChatGPTの請求設定かplatform.openai.comのBillingから1回。支払済みでない同一の有料契約が7日以上経過していること、ChatGPTとAPIアカウントが同一メールで両者の所有者であること。クレジットは請求サイクル末で失効し翌月へ繰越なし。CodexのAPIキー経由利用には使えず、ChatGPT・サインイン時Codexの利用枠も増えない。日本向けにはService Credit規約に「日本では2026-11-13以降発行のクレジットは発効から180日で失効」という条項があり発行自体は可能。",
+      "discount": null,
+      "starts": "2026-10-29",
+      "checkedAt": "2026-11-28",
+      "serviceSummary": "OpenAIの対話サービスと開発者向けAPI。CodexやResponses APIを含む。",
+      "serviceUrl": "https://platform.openai.com/",
+      "campaignType": "契約者向け毎月特典"
+    },
+    {
+      "name": "JetBrains Junie Lite free tier",
+      "url": "https://junie.jetbrains.com/docs/junie-lite.html",
+      "deadline": null,
+      "titleJa": "JetBrains Junie Lite：恒常的な無料モデル枠",
+      "group": "AIサービス",
+      "field": "開発エージェント",
+      "offerType": "無料枠",
+      "benefit": "コーディングエージェントJunieの基盤モデル枠が恒常無料",
+      "description": "JetBrainsのコーディングエージェントJunieに、試用ではなく期限も回数カウントもない無料の基盤モデル枠「Junie Lite」が設定された。JetBrainsアカウントで初回リクエスト時に自動付与。",
+      "conditions": "JetBrainsアカウントへのサインインのみで申込不要・カード不要。現在の基盤モデルはOpenAI GPT-6 Lunaで、JetBrainsは予告なく変更し得ると明記（モデル名でワークフローを組まないこと）。利用上限の数値は非公開で、通常利用は事実上無制限だがモデル側の容量に達すると停止する場合あり。IDE（JetBrains Air）とJunie CLIの両方で利用可。対象地域の明記はないが、JetBrainsは日本で円建て料金・日本語サポートを提供している。",
+      "discount": null,
+      "starts": null,
+      "checkedAt": "2026-11-28",
+      "serviceSummary": "JetBrainsの開発エージェント。IDE・ターミナルで計画・実装・検証を支援。",
+      "serviceUrl": "https://www.jetbrains.com/junie/",
+      "campaignType": "常設無料枠"
     }
   ],
-  "checked_at": "2026-11-27T17:23:42+00:00"
+  "checked_at": "2026-11-28T00:06:02+00:00"
 }
